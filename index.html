@@ -26,6 +26,7 @@ button:disabled{opacity:.45;cursor:not-allowed}
 .review{margin-top:22px;padding-top:22px;border-top:1px solid var(--line)}
 .answer{white-space:pre-wrap;background:#160e22;border:1px solid var(--line);border-radius:14px;padding:16px;color:#fff}
 .target{background:var(--panel2);border-radius:14px;padding:16px;margin-top:14px}
+.sound-status{font-weight:800;color:#eadfff;margin-top:0}
 .small{font-size:.9rem}
 .badge{display:inline-block;background:#35244e;color:#ddcaff;padding:6px 10px;border-radius:999px;font-size:.82rem;font-weight:800;margin-bottom:14px}
 </style>
@@ -38,7 +39,7 @@ button:disabled{opacity:.45;cursor:not-allowed}
 <div id="intro" class="intro">
 <p>Before hearing a sound, take a quiet moment and notice whatever comes to you. You might receive a feeling, word, image, place, color, emotion, temperature, object, animal, or something that doesn't make sense yet.</p>
 <div class="examples"><strong>Example only:</strong> You might write things like “cold,” “outside,” “something moving,” “blue,” or “uneasy.” These are only examples of the kinds of impressions you may notice — they are not clues about the upcoming sound.</div>
-<p>Don't try to figure it out. Write your impressions first. Once you lock them in, you'll hear the target and can compare what you received with what was actually there.</p>
+<p>Don't try to figure it out. Write your impressions first. Once you lock them in, the target sound will play automatically. Then reveal what the sounds were when you're ready.</p>
 <button id="begin">Begin Practice</button>
 </div>
 
@@ -50,15 +51,19 @@ button:disabled{opacity:.45;cursor:not-allowed}
 <div class="actions"><button id="lock">Lock In My Impressions</button></div>
 
 <div id="review" class="review hidden">
-<h2>Review</h2>
+<h2>Listen</h2>
 <p class="small">Your answer is locked for this round.</p>
 <div id="saved" class="answer"></div>
 <div class="target">
-<strong id="targetName">Target</strong>
-<div class="actions"><button id="playTarget">▶ Play Target Sound</button><button id="stopTarget" class="secondary">Stop</button></div>
+<p id="soundStatus" class="sound-status">Target sound is playing…</p>
+<div class="actions"><button id="replayTarget" class="secondary">Replay Sound</button><button id="stopTarget" class="secondary">Stop</button></div>
+<div class="actions"><button id="revealTarget">Reveal the Sounds</button></div>
+<div id="revealPanel" class="hidden">
+<h3 id="targetName">Target</h3>
 <p id="description"></p>
 </div>
-<div class="actions"><button id="next">Next Sound</button></div>
+</div>
+<div class="actions"><button id="next" class="hidden">Next Sound</button></div>
 </div>
 </div>
 </section>
@@ -86,7 +91,12 @@ function prepare(){
   $("impressions").disabled=false;
   $("lock").disabled=false;
   $("review").classList.add("hidden");
+  $("revealPanel").classList.add("hidden");
+  $("revealTarget").classList.remove("hidden");
+  $("next").classList.add("hidden");
+  $("soundStatus").textContent="Target sound is playing…";
   stopSound();
+  currentTarget=null;
   window.scrollTo({top:0,behavior:"smooth"});
 }
 
@@ -96,6 +106,7 @@ function track(n){ activeNodes.push(n); return n; }
 function stopSound(){
   activeNodes.forEach(n=>{try{n.stop&&n.stop()}catch(e){} try{n.disconnect&&n.disconnect()}catch(e){}});
   activeNodes=[];
+  if($("soundStatus") && currentTarget) $("soundStatus").textContent="Target sound stopped.";
 }
 function noiseBuffer(seconds=1){
   const c=ctx(), b=c.createBuffer(1,Math.floor(c.sampleRate*seconds),c.sampleRate), d=b.getChannelData(0);
@@ -132,7 +143,10 @@ function playThunderBirds(){
   [3.4,4.1,5.0,5.7].forEach((t,i)=>{tone([1600,1900,1450,2100][i],t,.22,.045,'sine'); tone([2200,2500,2000,2800][i],t+.1,.18,.03,'sine')});
 }
 function playSound(id){
-  stopSound(); const c=ctx(); if(c.state==='suspended') c.resume();
+  stopSound();
+  const c=ctx();
+  if(c.state==='suspended') c.resume();
+  $("soundStatus").textContent="Target sound is playing…";
   ({'rain-wolf':playRainWolf,'ocean-bells':playOceanBells,'fire-wind':playFireWind,'train-crowd':playTrainCrowd,'thunder-birds':playThunderBirds}[id]||(()=>{}))();
 }
 
@@ -149,15 +163,21 @@ $("lock").onclick=()=>{
   $("impressions").disabled=true;
   $("lock").disabled=true;
   $("saved").textContent=text;
-  $("targetName").textContent=t.title;
-  $("description").textContent=t.description;
   currentTarget=t;
   $("review").classList.remove("hidden");
   $("review").scrollIntoView({behavior:"smooth",block:"start"});
+  playSound(t.id);
 };
-$("playTarget").onclick=()=>{ if(currentTarget) playSound(currentTarget.id); };
+$("replayTarget").onclick=()=>{ if(currentTarget) playSound(currentTarget.id); };
 $("stopTarget").onclick=stopSound;
-
+$("revealTarget").onclick=()=>{
+  if(!currentTarget) return;
+  $("targetName").textContent=currentTarget.title;
+  $("description").textContent=currentTarget.description;
+  $("revealPanel").classList.remove("hidden");
+  $("revealTarget").classList.add("hidden");
+  $("next").classList.remove("hidden");
+};
 $("next").onclick=()=>{
   pos++;
   if(pos>=order.length) resetOrder();
