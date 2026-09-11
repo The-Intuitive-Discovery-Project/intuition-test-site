@@ -6,184 +6,21 @@
 <title>Sound Intuition Practice</title>
 <style>
 :root{--bg:#130d20;--panel:#211631;--panel2:#2c1d42;--text:#f6f0ff;--muted:#cbbddd;--accent:#b995ff;--accent2:#8e64e8;--line:#493663}
-*{box-sizing:border-box}
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:linear-gradient(180deg,#130d20,#1b1029);color:var(--text);min-height:100vh}
-main{width:min(760px,92%);margin:auto;padding:32px 0 60px}
-.card{background:rgba(33,22,49,.96);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 18px 50px rgba(0,0,0,.25)}
-h1{font-size:clamp(2rem,7vw,3.4rem);margin:0 0 10px;line-height:1.02}
-h2{margin-top:0}
-p{line-height:1.65;color:var(--muted)}
-.intro strong,.target strong{color:var(--text)}
-.examples{background:var(--panel2);padding:16px 18px;border-radius:14px;margin:18px 0;color:#e9def7;line-height:1.55}
-label{display:block;font-weight:700;margin:22px 0 8px}
-textarea{width:100%;min-height:170px;resize:vertical;border-radius:14px;border:1px solid var(--line);background:#140d20;color:var(--text);padding:15px;font:inherit;outline:none}
-textarea:focus{border-color:var(--accent)}
-button{border:0;border-radius:999px;padding:13px 19px;font-weight:800;font-size:1rem;cursor:pointer;margin-top:14px;background:var(--accent);color:#180d25}
-button.secondary{background:#3a2853;color:#fff}
-button:disabled{opacity:.45;cursor:not-allowed}
-.actions{display:flex;gap:10px;flex-wrap:wrap}
-.hidden{display:none}
-.review{margin-top:22px;padding-top:22px;border-top:1px solid var(--line)}
-.answer{white-space:pre-wrap;background:#160e22;border:1px solid var(--line);border-radius:14px;padding:16px;color:#fff}
-.target{background:var(--panel2);border-radius:14px;padding:16px;margin-top:14px}
-.sound-status{font-weight:800;color:#eadfff;margin-top:0}
-.small{font-size:.9rem}
-.badge{display:inline-block;background:#35244e;color:#ddcaff;padding:6px 10px;border-radius:999px;font-size:.82rem;font-weight:800;margin-bottom:14px}
-</style>
-</head>
-<body>
-<main>
-<section class="card">
-<div class="badge">Intuition Practice</div>
-<h1>Sound Intuition</h1>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:linear-gradient(180deg,#130d20,#1b1029);color:var(--text);min-height:100vh}main{width:min(760px,92%);margin:auto;padding:32px 0 60px}.card{background:rgba(33,22,49,.96);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 18px 50px rgba(0,0,0,.25)}h1{font-size:clamp(2rem,7vw,3.4rem);margin:0 0 10px;line-height:1.02}h2{margin-top:0}p{line-height:1.65;color:var(--muted)}label{display:block;font-weight:700;margin:22px 0 8px}textarea{width:100%;min-height:170px;resize:vertical;border-radius:14px;border:1px solid var(--line);background:#140d20;color:var(--text);padding:15px;font:inherit;outline:none}textarea:focus{border-color:var(--accent)}button{border:0;border-radius:999px;padding:13px 19px;font-weight:800;font-size:1rem;cursor:pointer;margin-top:14px;background:var(--accent);color:#180d25}button.secondary{background:#3a2853;color:#fff}button:disabled{opacity:.45;cursor:not-allowed}.actions{display:flex;gap:10px;flex-wrap:wrap}.hidden{display:none}.review{margin-top:22px;padding-top:22px;border-top:1px solid var(--line)}.answer{white-space:pre-wrap;background:#160e22;border:1px solid var(--line);border-radius:14px;padding:16px;color:#fff}.target{background:var(--panel2);border-radius:14px;padding:16px;margin-top:14px}.sound-status{font-weight:800;color:#eadfff;margin-top:0}.small{font-size:.9rem}.badge{display:inline-block;background:#35244e;color:#ddcaff;padding:6px 10px;border-radius:999px;font-size:.82rem;font-weight:800;margin-bottom:14px}
+</style></head><body><main><section class="card"><div class="badge">Intuition Practice</div><h1>Sound Intuition</h1>
 <div id="intro" class="intro">
-<p>Before hearing a sound, take a quiet moment and notice whatever comes to you. You might receive a feeling, word, image, place, color, emotion, temperature, object, animal, or something that doesn't make sense yet.</p>
-<div class="examples"><strong>Example only:</strong> You might write things like “cold,” “outside,” “something moving,” “blue,” or “uneasy.” These are only examples of the kinds of impressions you may notice — they are not clues about the upcoming sound.</div>
-<p>Don't try to figure it out. Write your impressions first. Once you lock them in, the target sound will play automatically. When you're ready, reveal what the sounds were.</p>
-<button id="begin">Begin Practice</button>
-</div>
-
-<div id="game" class="hidden">
-<h2>What do you sense?</h2>
-<p>Take your time. Write whatever comes to you before hearing the target.</p>
-<label for="impressions">Your impressions</label>
-<textarea id="impressions" placeholder="Write whatever comes to you..."></textarea>
-<div class="actions"><button id="lock">Lock In My Impressions</button></div>
-
-<div id="review" class="review hidden">
-<h2>Listen</h2>
-<p class="small">Your answer is locked for this round.</p>
-<div id="saved" class="answer"></div>
-<div class="target">
-<p id="soundStatus" class="sound-status">Target sound is playing…</p>
-<div class="actions"><button id="replayTarget" class="secondary">Play Again</button><button id="revealTarget">Reveal</button></div>
-<div id="revealPanel" class="hidden">
-<h3 id="targetName">Target</h3>
-<p id="description"></p>
-</div>
-</div>
-<div class="actions"><button id="next" class="hidden">Next Sound</button></div>
-</div>
-</div>
-</section>
-</main>
-
+<h2>Before you begin</h2>
+<p>Take a quiet moment and notice whatever comes to you.</p>
+<p>It could be a feeling, image, word, color, place, emotion, object, or something you can't explain yet.</p>
+<p>Don't overthink it. There are no clues. Write down your first impressions, lock them in, and then listen to the sound.</p>
+<button id="begin">Begin Practice</button></div>
+<div id="game" class="hidden"><h2>What do you sense?</h2><p>Take your time. Write whatever comes to you before hearing the target.</p><label for="impressions">Your impressions</label><textarea id="impressions" placeholder="Write whatever comes to you..."></textarea><div class="actions"><button id="lock">Lock In My Impressions</button></div>
+<div id="review" class="review hidden"><h2>Listen</h2><p class="small">Your answer is locked for this round.</p><div id="saved" class="answer"></div><div class="target"><p id="soundStatus" class="sound-status">Target sound is playing…</p><div class="actions"><button id="replayTarget" class="secondary">Play Again</button><button id="revealTarget">Reveal</button></div><div id="revealPanel" class="hidden"><h3 id="targetName">Target</h3><p id="description"></p></div></div><div class="actions"><button id="next" class="hidden">Next Sound</button></div></div></div></section></main>
 <script>
-const targets = [
-  {id:"rain-wolf", title:"Rain + Wolf", description:"Rain falling while a wolf howls in the distance."},
-  {id:"ocean-bells", title:"Ocean + Bells", description:"Ocean waves mixed with distant bells."},
-  {id:"fire-wind", title:"Fire + Wind", description:"A crackling fire with wind moving around it."},
-  {id:"train-crowd", title:"Train + Crowd", description:"A train mixed with the sounds of a crowd."},
-  {id:"thunder-birds", title:"Thunder + Birds", description:"Thunder with birds calling in the background."}
-];
-
-let order=[], pos=0;
-const $=id=>document.getElementById(id);
-
-function shuffle(a){
-  for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}
-  return a;
-}
-function resetOrder(){ order=shuffle([...targets.keys()]); pos=0; }
-function prepare(){
-  $("impressions").value="";
-  $("impressions").disabled=false;
-  $("lock").disabled=false;
-  $("review").classList.add("hidden");
-  $("revealPanel").classList.add("hidden");
-  $("next").classList.add("hidden");
-  $("revealTarget").classList.remove("hidden");
-  $("replayTarget").classList.remove("hidden");
-  $("soundStatus").textContent="Target sound is playing…";
-  stopSound();
-  currentTarget=null;
-  window.scrollTo({top:0,behavior:"smooth"});
-}
-
-let audioCtx=null, activeNodes=[], currentTarget=null;
-function ctx(){ return audioCtx || (audioCtx=new (window.AudioContext||window.webkitAudioContext)()); }
-function track(n){ activeNodes.push(n); return n; }
-function stopSound(){
-  activeNodes.forEach(n=>{try{n.stop&&n.stop()}catch(e){} try{n.disconnect&&n.disconnect()}catch(e){}});
-  activeNodes=[];
-}
-function noiseBuffer(seconds=1){
-  const c=ctx(), b=c.createBuffer(1,Math.floor(c.sampleRate*seconds),c.sampleRate), d=b.getChannelData(0);
-  for(let i=0;i<d.length;i++) d[i]=Math.random()*2-1; return b;
-}
-function noise({gain=.1,low=0,high=0,dur=6}={}){
-  const c=ctx(), src=track(c.createBufferSource()), g=c.createGain(); src.buffer=noiseBuffer(Math.max(1,dur)); src.loop=true; g.gain.value=gain;
-  let node=src; if(low||high){ const f=c.createBiquadFilter(); f.type=low?'lowpass':'highpass'; f.frequency.value=low||high; node.connect(f); node=f; }
-  node.connect(g).connect(c.destination); src.start(); src.stop(c.currentTime+dur); return src;
-}
-function tone(freq,start,dur,gain=.08,type='sine'){
-  const c=ctx(), o=track(c.createOscillator()), g=c.createGain(); o.type=type; o.frequency.value=freq; g.gain.setValueAtTime(0,c.currentTime+start); g.gain.linearRampToValueAtTime(gain,c.currentTime+start+.05); g.gain.exponentialRampToValueAtTime(.001,c.currentTime+start+dur); o.connect(g).connect(c.destination); o.start(c.currentTime+start); o.stop(c.currentTime+start+dur); return o;
-}
-function playRainWolf(){
-  noise({gain:.16,high:1800,dur:7}); noise({gain:.05,low:700,dur:7});
-  const c=ctx(), o=track(c.createOscillator()), g=c.createGain(); o.type='sine'; o.frequency.setValueAtTime(310,c.currentTime+2); o.frequency.exponentialRampToValueAtTime(520,c.currentTime+3.3); o.frequency.exponentialRampToValueAtTime(250,c.currentTime+4.6); g.gain.setValueAtTime(.001,c.currentTime+2); g.gain.linearRampToValueAtTime(.12,c.currentTime+2.5); g.gain.exponentialRampToValueAtTime(.001,c.currentTime+4.8); o.connect(g).connect(c.destination); o.start(c.currentTime+2); o.stop(c.currentTime+4.9);
-}
-function playOceanBells(){
-  noise({gain:.12,low:500,dur:7});
-  [1.2,2.6,4.2,5.4].forEach((t,i)=>{tone([660,880,740,990][i],t,1.4,.08,'sine'); tone([1320,1760,1480,1980][i],t,.8,.03,'sine')});
-}
-function playFireWind(){
-  noise({gain:.08,low:800,dur:7}); noise({gain:.05,high:2500,dur:7});
-  [0.7,1.4,2.2,3.1,4.0,5.1,5.8].forEach(t=>tone(120+Math.random()*100,t,.09,.05,'square'));
-}
-function playTrainCrowd(){
-  noise({gain:.06,low:1100,dur:7});
-  [0,.65,1.3,1.95,2.6,3.25,3.9,4.55,5.2,5.85].forEach(t=>tone(92,t,.34,.05,'square'));
-  [0.3,1.1,2,3.2,4.4,5.6].forEach(t=>tone(180+Math.random()*70,t,.7,.025,'sawtooth'));
-}
-function playThunderBirds(){
-  noise({gain:.05,high:2300,dur:7});
-  const c=ctx(), src=track(c.createBufferSource()), g=c.createGain(), f=c.createBiquadFilter(); src.buffer=noiseBuffer(2.5); f.type='lowpass'; f.frequency.value=180; g.gain.setValueAtTime(.001,c.currentTime+.5); g.gain.linearRampToValueAtTime(.38,c.currentTime+.8); g.gain.exponentialRampToValueAtTime(.001,c.currentTime+3.0); src.connect(f).connect(g).connect(c.destination); src.start(c.currentTime+.5); src.stop(c.currentTime+3.1);
-  [3.4,4.1,5.0,5.7].forEach((t,i)=>{tone([1600,1900,1450,2100][i],t,.22,.045,'sine'); tone([2200,2500,2000,2800][i],t+.1,.18,.03,'sine')});
-}
-function playSound(id){
-  stopSound();
-  const c=ctx();
-  if(c.state==='suspended') c.resume();
-  $("soundStatus").textContent="Target sound is playing…";
-  ({'rain-wolf':playRainWolf,'ocean-bells':playOceanBells,'fire-wind':playFireWind,'train-crowd':playTrainCrowd,'thunder-birds':playThunderBirds}[id]||(()=>{}))();
-}
-function revealTarget(){
-  if(!currentTarget) return;
-  stopSound();
-  $("soundStatus").textContent="Target revealed.";
-  $("targetName").textContent=currentTarget.title;
-  $("description").textContent=currentTarget.description;
-  $("revealPanel").classList.remove("hidden");
-  $("revealTarget").classList.add("hidden");
-  $("next").classList.remove("hidden");
-}
-
-$("begin").onclick=()=>{
-  resetOrder();
-  $("intro").classList.add("hidden");
-  $("game").classList.remove("hidden");
-  prepare();
-};
-$("lock").onclick=()=>{
-  const text=$("impressions").value.trim();
-  if(!text){ $("impressions").focus(); return; }
-  const t=targets[order[pos]];
-  $("impressions").disabled=true;
-  $("lock").disabled=true;
-  $("saved").textContent=text;
-  currentTarget=t;
-  $("review").classList.remove("hidden");
-  $("review").scrollIntoView({behavior:"smooth",block:"start"});
-  playSound(t.id);
-};
-$("replayTarget").onclick=()=>{ if(currentTarget) playSound(currentTarget.id); };
-$("revealTarget").onclick=revealTarget;
-$("next").onclick=()=>{
-  pos++;
-  if(pos>=order.length) resetOrder();
-  prepare();
-};
-</script>
-</body>
-</html>
+const targets=[{id:'rain-wolf',title:'Rain + Wolf',description:'Rain falling while a wolf howls in the distance.'},{id:'ocean-bells',title:'Ocean + Bells',description:'Ocean waves mixed with distant bells.'},{id:'fire-wind',title:'Fire + Wind',description:'A crackling fire with wind moving around it.'},{id:'train-crowd',title:'Train + Crowd',description:'A train mixed with the sounds of a crowd.'},{id:'thunder-birds',title:'Thunder + Birds',description:'Thunder with birds calling in the background.'}];
+let order=[],pos=0;const $=id=>document.getElementById(id);function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}function resetOrder(){order=shuffle([...targets.keys()]);pos=0}function prepare(){$('impressions').value='';$('impressions').disabled=false;$('lock').disabled=false;$('review').classList.add('hidden');$('revealPanel').classList.add('hidden');$('next').classList.add('hidden');$('revealTarget').classList.remove('hidden');$('replayTarget').classList.remove('hidden');$('soundStatus').textContent='Target sound is playing…';stopSound();currentTarget=null;window.scrollTo({top:0,behavior:'smooth'})}
+let audioCtx=null,activeNodes=[],currentTarget=null;function ctx(){return audioCtx||(audioCtx=new(window.AudioContext||window.webkitAudioContext)())}function track(n){activeNodes.push(n);return n}function stopSound(){activeNodes.forEach(n=>{try{n.stop&&n.stop()}catch(e){}try{n.disconnect&&n.disconnect()}catch(e){}});activeNodes=[]}function noiseBuffer(seconds=1){const c=ctx(),b=c.createBuffer(1,Math.floor(c.sampleRate*seconds),c.sampleRate),d=b.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=Math.random()*2-1;return b}function noise({gain=.1,low=0,high=0,dur=6}={}){const c=ctx(),src=track(c.createBufferSource()),g=c.createGain();src.buffer=noiseBuffer(Math.max(1,dur));src.loop=true;g.gain.value=gain;let node=src;if(low||high){const f=c.createBiquadFilter();f.type=low?'lowpass':'highpass';f.frequency.value=low||high;node.connect(f);node=f}node.connect(g).connect(c.destination);src.start();src.stop(c.currentTime+dur);return src}function tone(freq,start,dur,gain=.08,type='sine'){const c=ctx(),o=track(c.createOscillator()),g=c.createGain();o.type=type;o.frequency.value=freq;g.gain.setValueAtTime(0,c.currentTime+start);g.gain.linearRampToValueAtTime(gain,c.currentTime+start+.05);g.gain.exponentialRampToValueAtTime(.001,c.currentTime+start+dur);o.connect(g).connect(c.destination);o.start(c.currentTime+start);o.stop(c.currentTime+start+dur);return o}
+function playRainWolf(){noise({gain:.16,high:1800,dur:7});noise({gain:.05,low:700,dur:7});const c=ctx(),o=track(c.createOscillator()),g=c.createGain();o.type='sine';o.frequency.setValueAtTime(310,c.currentTime+2);o.frequency.exponentialRampToValueAtTime(520,c.currentTime+3.3);o.frequency.exponentialRampToValueAtTime(250,c.currentTime+4.6);g.gain.setValueAtTime(.001,c.currentTime+2);g.gain.linearRampToValueAtTime(.12,c.currentTime+2.5);g.gain.exponentialRampToValueAtTime(.001,c.currentTime+4.8);o.connect(g).connect(c.destination);o.start(c.currentTime+2);o.stop(c.currentTime+4.9)}function playOceanBells(){noise({gain:.12,low:500,dur:7});[1.2,2.6,4.2,5.4].forEach((t,i)=>{tone([660,880,740,990][i],t,1.4,.08);tone([1320,1760,1480,1980][i],t,.8,.03)})}function playFireWind(){noise({gain:.08,low:800,dur:7});noise({gain:.05,high:2500,dur:7});[.7,1.4,2.2,3.1,4,5.1,5.8].forEach(t=>tone(120+Math.random()*100,t,.09,.05,'square'))}function playTrainCrowd(){noise({gain:.06,low:1100,dur:7});[0,.65,1.3,1.95,2.6,3.25,3.9,4.55,5.2,5.85].forEach(t=>tone(92,t,.34,.05,'square'));[.3,1.1,2,3.2,4.4,5.6].forEach(t=>tone(180+Math.random()*70,t,.7,.025,'sawtooth'))}function playThunderBirds(){noise({gain:.05,high:2300,dur:7});const c=ctx(),src=track(c.createBufferSource()),g=c.createGain(),f=c.createBiquadFilter();src.buffer=noiseBuffer(2.5);f.type='lowpass';f.frequency.value=180;g.gain.setValueAtTime(.001,c.currentTime+.5);g.gain.linearRampToValueAtTime(.38,c.currentTime+.8);g.gain.exponentialRampToValueAtTime(.001,c.currentTime+3);src.connect(f).connect(g).connect(c.destination);src.start(c.currentTime+.5);src.stop(c.currentTime+3.1);[3.4,4.1,5,5.7].forEach((t,i)=>{tone([1600,1900,1450,2100][i],t,.22,.045);tone([2200,2500,2000,2800][i],t+.1,.18,.03)})}
+function playSound(id){stopSound();const c=ctx();if(c.state==='suspended')c.resume();$('soundStatus').textContent='Target sound is playing…';({'rain-wolf':playRainWolf,'ocean-bells':playOceanBells,'fire-wind':playFireWind,'train-crowd':playTrainCrowd,'thunder-birds':playThunderBirds}[id]||(()=>{}))()}function revealTarget(){if(!currentTarget)return;stopSound();$('soundStatus').textContent='Target revealed.';$('targetName').textContent=currentTarget.title;$('description').textContent=currentTarget.description;$('revealPanel').classList.remove('hidden');$('revealTarget').classList.add('hidden');$('next').classList.remove('hidden')}
+$('begin').onclick=()=>{resetOrder();$('intro').classList.add('hidden');$('game').classList.remove('hidden');prepare()};$('lock').onclick=()=>{const text=$('impressions').value.trim();if(!text){$('impressions').focus();return}const t=targets[order[pos]];$('impressions').disabled=true;$('lock').disabled=true;$('saved').textContent=text;currentTarget=t;$('review').classList.remove('hidden');$('review').scrollIntoView({behavior:'smooth',block:'start'});playSound(t.id)};$('replayTarget').onclick=()=>{if(currentTarget)playSound(currentTarget.id)};$('revealTarget').onclick=revealTarget;$('next').onclick=()=>{pos++;if(pos>=order.length)resetOrder();prepare()};
+</script></body></html>
