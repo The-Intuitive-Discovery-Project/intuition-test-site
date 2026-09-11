@@ -39,7 +39,7 @@ button:disabled{opacity:.45;cursor:not-allowed}
 <div id="intro" class="intro">
 <p>Before hearing a sound, take a quiet moment and notice whatever comes to you. You might receive a feeling, word, image, place, color, emotion, temperature, object, animal, or something that doesn't make sense yet.</p>
 <div class="examples"><strong>Example only:</strong> You might write things like “cold,” “outside,” “something moving,” “blue,” or “uneasy.” These are only examples of the kinds of impressions you may notice — they are not clues about the upcoming sound.</div>
-<p>Don't try to figure it out. Write your impressions first. Once you lock them in, the target sound will play automatically. Stop the sound when you're ready to reveal what it was.</p>
+<p>Don't try to figure it out. Write your impressions first. Once you lock them in, the target sound will play automatically. When you're ready, reveal what the sounds were.</p>
 <button id="begin">Begin Practice</button>
 </div>
 
@@ -56,7 +56,7 @@ button:disabled{opacity:.45;cursor:not-allowed}
 <div id="saved" class="answer"></div>
 <div class="target">
 <p id="soundStatus" class="sound-status">Target sound is playing…</p>
-<div class="actions"><button id="replayTarget" class="secondary">Replay Sound</button><button id="stopReveal">Stop & Reveal</button></div>
+<div class="actions"><button id="replayTarget" class="secondary">Play Again</button><button id="revealTarget">Reveal</button></div>
 <div id="revealPanel" class="hidden">
 <h3 id="targetName">Target</h3>
 <p id="description"></p>
@@ -92,7 +92,7 @@ function prepare(){
   $("review").classList.add("hidden");
   $("revealPanel").classList.add("hidden");
   $("next").classList.add("hidden");
-  $("stopReveal").classList.remove("hidden");
+  $("revealTarget").classList.remove("hidden");
   $("replayTarget").classList.remove("hidden");
   $("soundStatus").textContent="Target sound is playing…";
   stopSound();
@@ -155,7 +155,7 @@ function revealTarget(){
   $("targetName").textContent=currentTarget.title;
   $("description").textContent=currentTarget.description;
   $("revealPanel").classList.remove("hidden");
-  $("stopReveal").classList.add("hidden");
+  $("revealTarget").classList.add("hidden");
   $("next").classList.remove("hidden");
 }
 
@@ -178,7 +178,7 @@ $("lock").onclick=()=>{
   playSound(t.id);
 };
 $("replayTarget").onclick=()=>{ if(currentTarget) playSound(currentTarget.id); };
-$("stopReveal").onclick=revealTarget;
+$("revealTarget").onclick=revealTarget;
 $("next").onclick=()=>{
   pos++;
   if(pos>=order.length) resetOrder();
