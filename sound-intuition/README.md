@@ -24,9 +24,10 @@ This folder is intentionally isolated from the existing test-site pages.
 - Sound Intuition remains isolated under `/sound-intuition/`; unrelated test pages were not overwritten.
 - Manifest paths point to the normalized production library and include the repaired whale entry.
 - Google Drive originals/backups and the normalized library remain preserved.
+- The manifest verification bug that produced `System.Object[]` in `Join-Path` has been fixed in the current staging script.
 
 ## Audio location expected by the app
-Copy the normalized library into:
+The normalized library belongs at:
 
 `/sound-intuition/audio-normalized/<category>/<file>.mp3`
 
@@ -35,19 +36,27 @@ The app loads `sounds-01.json` through `sounds-08.json` and uses each entry’s 
 ## Current source-library status
 - 159 normalized production entries are included across the eight manifest parts.
 - The repaired whale source is normalized and included in the current manifest.
+- Google Drive contains 160 normalized files because one legacy whale file is intentionally preserved but not referenced by the production manifests.
 - 6 source downloads still fail with HTTP 403 and are intentionally absent from this production manifest: gentle-rain, morning-birds, fireworks, hail, thunderstorm, geiger-counter.
 - Originals in Google Drive remain untouched.
 
-## Only remaining live-test blocker
-The normalized binary audio folder is still in Google Drive and is not yet present in this GitHub repository. Until it is staged, GitHub Pages can load the interface and manifests but cannot play the real sound files.
+## Current staging status
+A local staging run successfully copied all 160 normalized files into the local GitHub test clone (about 31 MB, 0 robocopy failures). That run then stopped during the old manifest-verification step before the audio folder was committed or pushed.
 
-From a local clone with Google Drive Desktop available, run:
+The current `STAGE-AUDIO-FROM-GOOGLE-DRIVE.ps1` fixes that verification problem by flattening the manifest arrays, converting each `production_file` to a single string, using literal-path verification, and skipping unnecessary recopy when files are already present.
 
-`sound-intuition\STAGE-AUDIO-FROM-GOOGLE-DRIVE.bat`
+`FINISH-SOUND-INTUITION.bat` / `.ps1` are provided for the final local step. They update the clone safely, verify the already-staged files, stage only `sound-intuition/audio-normalized`, commit it if needed, and push `main`. They stop if unrelated tracked local changes are present.
 
-The helper copies rather than moves the normalized files, verifies every manifest path, and preserves the Drive originals.
+## Remaining live-test blocker
+The normalized binary audio folder is staged in Hunter’s local clone but is not yet in the GitHub repository. GitHub Pages therefore cannot complete real listening/mobile tests until that already-staged folder is verified and pushed.
 
-## Testing checklist after audio staging
+From the already-staged local clone, double-click:
+
+`sound-intuition\FINISH-SOUND-INTUITION.bat`
+
+The finalizer should verify the 159 manifest-referenced files, report the one intentionally unreferenced legacy whale file as informational, commit the audio folder if necessary, and push it to the test repository without touching unrelated pages.
+
+## Testing checklist after audio push
 1. Open `/sound-intuition/` on the GitHub Pages test site.
 2. Enter impressions and lock them in; sound should autoplay from the click gesture.
 3. Test Play Again and Reveal.
