@@ -20,16 +20,25 @@
   let currentTargets = [];
   let currentAudios = [];
   let phase = 'writing';
+  let playbackToken = 0;
 
   function defaultState() {
     return { version: 1, gentleMode: false, volume: 75, usage: {}, recent: [], history: [], completed: 0 };
   }
   function loadState() {
-    try { return { ...defaultState(), ...JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') }; }
-    catch { return defaultState(); }
+    try {
+      const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+      const merged = { ...defaultState(), ...(saved && typeof saved === 'object' ? saved : {}) };
+      if (!merged.usage || typeof merged.usage !== 'object' || Array.isArray(merged.usage)) merged.usage = {};
+      if (!Array.isArray(merged.recent)) merged.recent = [];
+      if (!Array.isArray(merged.history)) merged.history = [];
+      merged.volume = clamp(Number(merged.volume) || 75, 25, 100);
+      merged.completed = Math.max(0, Number(merged.completed) || 0);
+      return merged;
+    } catch { return defaultState(); }
   }
   function saveState() {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch {}
     els.roundsCompleted.textContent = state.completed || state.history.length || 0;
   }
   function showError(message) { els.error.textContent = message; els.error.classList.remove('hidden'); }
@@ -45,7 +54,7 @@
 
   function eligibleLibrary() {
     const gentle = els.gentle.checked;
-    return library.filter(s => s.enabled !== false && s.production_file && (!gentle || Number(s.startle_level || 1) <= 1));
+    return library.filter(s => s && s.id && s.enabled !== false && typeof s.production_file === 'string' && s.production_file && (!gentle || Number(s.startle_level || 1) <= 1));
   }
 
   function balancedPick(pool, count) {
@@ -56,7 +65,6 @@
       let candidates = pool.filter(s => !chosen.some(c => c.id === s.id) && !blocked.has(s.id));
       if (!candidates.length) candidates = pool.filter(s => !chosen.some(c => c.id === s.id));
       if (!candidates.length) break;
-
       const minUse = Math.min(...candidates.map(s => Number(state.usage[s.id] || 0)));
       let fair = candidates.filter(s => Number(state.usage[s.id] || 0) <= minUse + 1);
       const diverse = fair.filter(s => !usedCats.has(s.category));
@@ -71,12 +79,12 @@
   function selectTargets() {
     const pool = eligibleLibrary();
     if (!pool.length) throw new Error('No playable sounds are available for the current settings.');
-    const count = Math.min(weightedCount(), pool.length);
-    return balancedPick(pool, count);
+    return balancedPick(pool, Math.min(weightedCount(), pool.length));
   }
 
   function stopAudio() {
-    currentAudios.forEach(a => { try { a.pause(); a.currentTime = 0; } catch {} });
+    playbackToken++;
+    currentAudios.forEach(a => { try { a.pause(); a.currentTime = 0; a.removeAttribute('src'); a.load(); } catch {} });
     currentAudios = [];
   }
 
@@ -89,13 +97,14 @@
   }
 
   function pathFor(sound) {
-    return sound.production_file.replace(/^audio-normalized\//, 'audio-normalized/');
+    return String(sound.production_file || '').replace(/\\/g, '/').replace(/^\.\//, '');
   }
 
   async function playTargets() {
     clearError();
     stopAudio();
-    if (!currentTargets.length) return;
+    if (!currentTargets.length || phase !== 'locked') return;
+    const token = playbackToken;
     const audios = currentTargets.map(sound => {
       const a = new Audio();
       a.preload = 'auto';
@@ -104,12 +113,16 @@
       return a;
     });
     currentAudios = audios;
+    els.replay.disabled = true;
     els.playStatus.textContent = currentTargets.length === 1 ? 'Playing your hidden sound…' : `Playing a hidden mix of ${currentTargets.length} sounds…`;
     const results = await Promise.allSettled(audios.map(a => a.play()));
-    if (results.every(r => r.status === 'rejected')) {
-      showError('The audio files are not staged on this test build yet. The Sound Intuition engine is ready, but the normalized audio folder must be copied into this app path before playback can work.');
-    } else if (results.some(r => r.status === 'rejected')) {
-      showError('One sound in this mix could not play. You can reveal this round or move to the next one.');
+    if (token !== playbackToken || phase !== 'locked') return;
+    els.replay.disabled = false;
+    const rejected = results.filter(r => r.status === 'rejected').length;
+    if (rejected === results.length) {
+      showError('The hidden audio could not start. Check that the normalized audio files are present, then tap Play Again.');
+    } else if (rejected) {
+      showError('One sound in this mix could not play. You can try Play Again, reveal this round, or move to the next one.');
     }
   }
 
@@ -126,6 +139,7 @@
     try { currentTargets = selectTargets(); } catch (e) { showError(e.message); return; }
     phase = 'locked';
     els.impressions.disabled = true;
+    els.gentle.disabled = true;
     els.lock.classList.add('hidden');
     els.playPanel.classList.remove('hidden');
     els.roundBadge.textContent = 'Locked in';
@@ -140,6 +154,7 @@
     if (phase !== 'locked') return;
     stopAudio();
     phase = 'revealed';
+    els.replay.disabled = true;
     els.revealList.innerHTML = '';
     currentTargets.forEach(t => {
       const item = document.createElement('div'); item.className = 'reveal-item';
@@ -150,14 +165,10 @@
     els.revealPanel.classList.remove('hidden');
     els.reveal.disabled = true;
     els.roundBadge.textContent = 'Revealed';
-    const entry = {
-      at: new Date().toISOString(),
-      impressions: els.impressions.value.trim(),
-      gentleMode: els.gentle.checked,
-      targetIds: currentTargets.map(t => t.id),
-      targets: currentTargets.map(t => t.reveal_label || t.id)
-    };
-    state.history.unshift(entry);
+    state.history.unshift({
+      at: new Date().toISOString(), impressions: els.impressions.value.trim(), gentleMode: els.gentle.checked,
+      targetIds: currentTargets.map(t => t.id), targets: currentTargets.map(t => t.reveal_label || t.id)
+    });
     state.history = state.history.slice(0, HISTORY_LIMIT);
     state.completed = Number(state.completed || 0) + 1;
     saveState();
@@ -165,10 +176,10 @@
 
   function newRound() {
     stopAudio(); currentTargets = []; phase = 'writing'; clearError();
-    els.impressions.disabled = false; els.impressions.value = ''; els.charCount.textContent = '0';
-    els.lock.classList.remove('hidden'); els.playPanel.classList.add('hidden'); els.revealPanel.classList.add('hidden'); els.reveal.disabled = false;
+    els.impressions.disabled = false; els.gentle.disabled = false; els.impressions.value = ''; els.charCount.textContent = '0';
+    els.lock.classList.remove('hidden'); els.playPanel.classList.add('hidden'); els.revealPanel.classList.add('hidden'); els.reveal.disabled = false; els.replay.disabled = false;
     els.roundBadge.textContent = 'Ready'; els.roundTitle.textContent = 'What do you notice?'; els.roundHelp.textContent = 'Type any impressions that come to you before hearing the sound.';
-    els.impressions.focus({ preventScroll: true });
+    try { els.impressions.focus({ preventScroll: true }); } catch { els.impressions.focus(); }
   }
 
   function renderHistory() {
@@ -177,24 +188,27 @@
     state.history.forEach(entry => {
       const item=document.createElement('article'); item.className='history-item';
       const time=document.createElement('time'); time.dateTime=entry.at; time.textContent=new Date(entry.at).toLocaleString();
-      const p=document.createElement('p'); p.textContent=entry.impressions;
-      const targets=document.createElement('div'); targets.className='history-targets'; targets.textContent='Revealed: '+(entry.targets||[]).join(' + ');
+      const p=document.createElement('p'); p.textContent=entry.impressions || '';
+      const targets=document.createElement('div'); targets.className='history-targets'; targets.textContent='Revealed: '+(Array.isArray(entry.targets) ? entry.targets : []).join(' + ');
       item.append(time,p,targets); els.historyList.appendChild(item);
     });
   }
 
   async function init() {
     els.gentle.checked = Boolean(state.gentleMode);
-    els.volume.value = Number(state.volume || 75); els.volumeText.textContent = `${els.volume.value}%`; saveState();
+    els.volume.value = state.volume; els.volumeText.textContent = `${els.volume.value}%`; saveState();
     try {
       const responses = await Promise.all(MANIFEST_URLS.map(url => fetch(url, { cache: 'no-store' })));
       const failed = responses.find(r => !r.ok);
       if (failed) throw new Error(`Manifest returned ${failed.status}`);
       const parts = await Promise.all(responses.map(r => r.json()));
-      library = parts.flat();
+      if (parts.some(part => !Array.isArray(part))) throw new Error('Manifest format is invalid');
+      library = parts.flat().filter(Boolean);
+      const ids = library.map(s => s.id);
+      if (!library.length || new Set(ids).size !== ids.length) throw new Error('Manifest IDs are empty or duplicated');
       els.libraryCount.textContent = library.length;
     } catch (e) {
-      showError('The sound manifest could not load. This test page could not load its sound manifest files.');
+      showError('The sound library could not load. Refresh this page and try again.');
       els.lock.disabled = true;
     }
   }
