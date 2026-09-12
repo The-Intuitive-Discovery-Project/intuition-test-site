@@ -6,7 +6,7 @@ This folder is intentionally isolated from the existing test-site pages.
 - Real-audio manifest based on the normalized Sound Intuition production library (159 playable entries).
 - Random 1–3 component mixes (weighted toward single sounds for learnability).
 - Balanced selection using persistent per-sound usage counts.
-- Immediate-repeat prevention using a 12-sound recent-history window.
+- Immediate/recent-repeat prevention using a 12-sound recent-history window.
 - Category diversity preference inside multi-sound mixes.
 - Safe playback scaling on top of the already-normalized source files.
 - Extra attenuation for startle level 2/3 clips and multi-sound mixes.
@@ -18,6 +18,13 @@ This folder is intentionally isolated from the existing test-site pages.
 - Responsive/mobile-first interface.
 - Stops playback when the page is hidden or left.
 
+## Validation completed
+- Latest GitHub test-repository version checked before comparing the Google Drive working copy.
+- `app.js` passes JavaScript syntax validation.
+- Sound Intuition remains isolated under `/sound-intuition/`; unrelated test pages were not overwritten.
+- Manifest paths point to the normalized production library and include the repaired whale entry.
+- Google Drive originals/backups and the normalized library remain preserved.
+
 ## Audio location expected by the app
 Copy the normalized library into:
 
@@ -27,9 +34,18 @@ The app loads `sounds-01.json` through `sounds-08.json` and uses each entry’s 
 
 ## Current source-library status
 - 159 normalized production entries are included across the eight manifest parts.
-- 1 missing whale source was repaired and normalized after the first normalization pass.
+- The repaired whale source is normalized and included in the current manifest.
 - 6 source downloads still fail with HTTP 403 and are intentionally absent from this production manifest: gentle-rain, morning-birds, fireworks, hail, thunderstorm, geiger-counter.
 - Originals in Google Drive remain untouched.
+
+## Only remaining live-test blocker
+The normalized binary audio folder is still in Google Drive and is not yet present in this GitHub repository. Until it is staged, GitHub Pages can load the interface and manifests but cannot play the real sound files.
+
+From a local clone with Google Drive Desktop available, run:
+
+`sound-intuition\STAGE-AUDIO-FROM-GOOGLE-DRIVE.bat`
+
+The helper copies rather than moves the normalized files, verifies every manifest path, and preserves the Drive originals.
 
 ## Testing checklist after audio staging
 1. Open `/sound-intuition/` on the GitHub Pages test site.
