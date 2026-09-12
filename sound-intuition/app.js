@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const MANIFEST_URL = 'sounds.json';
+  const MANIFEST_URLS = Array.from({length:8}, (_, i) => `sounds-${String(i + 1).padStart(2, '0')}.json`);
   const STORAGE_KEY = 'soundIntuition.v1';
   const RECENT_LIMIT = 12;
   const HISTORY_LIMIT = 100;
@@ -187,13 +187,14 @@
     els.gentle.checked = Boolean(state.gentleMode);
     els.volume.value = Number(state.volume || 75); els.volumeText.textContent = `${els.volume.value}%`; saveState();
     try {
-      const response = await fetch(MANIFEST_URL, { cache: 'no-store' });
-      if (!response.ok) throw new Error(`Manifest returned ${response.status}`);
-      const manifest = await response.json();
-      library = Array.isArray(manifest) ? manifest : manifest.sounds || [];
+      const responses = await Promise.all(MANIFEST_URLS.map(url => fetch(url, { cache: 'no-store' })));
+      const failed = responses.find(r => !r.ok);
+      if (failed) throw new Error(`Manifest returned ${failed.status}`);
+      const parts = await Promise.all(responses.map(r => r.json()));
+      library = parts.flat();
       els.libraryCount.textContent = library.length;
     } catch (e) {
-      showError('The sound manifest could not load. This test page needs sounds.json beside app.js.');
+      showError('The sound manifest could not load. This test page could not load its sound manifest files.');
       els.lock.disabled = true;
     }
   }
