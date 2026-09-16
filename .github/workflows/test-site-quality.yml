@@ -1,0 +1,69 @@
+name: Test Site Quality
+
+on:
+  push:
+    branches:
+      - main
+      - quality/test-site-qc-2026-09-15
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  quality:
+    if: ${{ !contains(github.event.head_commit.message || '', '[test-site-bot]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out triggering source
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.ref_name }}
+          fetch-depth: 0
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Apply deterministic test-site quality baseline
+        run: node scripts/apply-test-site-quality.mjs
+
+      - name: Validate public test-site and Sound Intuition contracts
+        run: node tests/test-site-quality.mjs
+
+      - name: Validate JavaScript syntax
+        run: |
+          node --check scripts/apply-test-site-quality.mjs
+          node --check tests/test-site-quality.mjs
+          node --check sound-intuition/app.js
+
+      - name: Validate generated diff formatting
+        run: git diff --check
+
+      - name: Require PR sources to already contain generated safeguards
+        if: ${{ github.event_name == 'pull_request' }}
+        shell: bash
+        run: |
+          if ! git diff --quiet; then
+            echo "Generated test-site safeguards are missing from the PR branch."
+            git diff --stat
+            exit 1
+          fi
+
+      - name: Commit generated test-site safeguards on push
+        if: ${{ github.event_name == 'push' }}
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "No generated test-site changes needed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- '*.html' '*/index.html' robots.txt
+          git commit -m "[test-site-bot] Apply test-site indexing safeguards"
+          git push origin HEAD:${{ github.ref_name }}
