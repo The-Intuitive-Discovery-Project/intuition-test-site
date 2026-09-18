@@ -67,7 +67,7 @@ jobs:
             exit 0
           fi
           git config user.name "github-actions[bot]"
-          git config user.email "4189828+github-actions[bot]@users.noreply.github.com"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- '*.html' '*/index.html' robots.txt
           git commit -m "[test-site-bot] Apply test-site indexing safeguards"
           git push origin HEAD:${{ github.ref_name }}
