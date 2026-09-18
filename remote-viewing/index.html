@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Remote Viewing 101 - Private Test</title>
+<style>
+*{box-sizing:border-box}
+:root{
+  --bg:#09070d;--bg2:#140d1e;--panel:#171020;--panel2:#21152e;--line:#4b3962;
+  --text:#f8f5ff;--muted:#b8afc3;--purple:#a98ad8;--purple2:#d8c8ff;--button:#e9ddff;
+  --good:#c7f2d5;--warn:#ffe2a8;--bad:#ffd1d1
+}
+html{background:#07070a;min-height:100%}
+body{margin:0;min-height:100dvh;background:radial-gradient(circle at top,#291b40 0,#120c1b 38%,#08070b 70%);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+button,a{touch-action:manipulation}
+.shell{width:min(1000px,94%);margin:auto;padding:24px 0 70px}
+.hero{padding:26px 22px 20px;text-align:center}
+.badge{display:inline-block;padding:6px 10px;border:1px solid #70558f;border-radius:999px;color:#dccfff;font-size:.76rem;font-weight:900;letter-spacing:.05em}
+.hero h1{font-size:clamp(2.2rem,8vw,4.4rem);margin:14px 0 7px;line-height:1}
+.hero p{max-width:760px;margin:0 auto;color:var(--muted);line-height:1.65}
+.tabs{position:sticky;top:0;z-index:30;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;background:rgba(8,7,11,.93);backdrop-filter:blur(12px);padding:10px;border:1px solid #33263f;border-radius:18px}
+.tab{border:1px solid #40324f;border-radius:13px;background:#15101c;color:#d8d0df;padding:12px 10px;font:inherit;font-weight:850;cursor:pointer}
+.tab.active{background:#e9ddff;color:#1a1025;border-color:#e9ddff}
+.view{display:none}.view.active{display:block}
+.panel{background:linear-gradient(180deg,rgba(25,17,34,.98),rgba(14,11,20,.98));border:1px solid #3d3049;border-radius:22px;padding:20px;margin-top:16px;box-shadow:0 16px 50px rgba(0,0,0,.15)}
+.panel h2,.panel h3{margin-top:0}.panel p,.panel li{color:var(--muted);line-height:1.65}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{background:#100c16;border:1px solid #33283e;border-radius:16px;padding:16px}
+.card h3{font-size:1rem;margin-bottom:6px}.card p{margin:0}
+.callout{border-left:4px solid #9f7acc;background:#171020;padding:14px 15px;border-radius:0 13px 13px 0;color:#d9d1e2;line-height:1.6}
+.btn{border:0;border-radius:14px;padding:14px 18px;background:var(--button);color:#1b1027;font:inherit;font-weight:950;cursor:pointer}
+.btn.secondary{background:#271d32;color:#fff;border:1px solid #5b476e}
+.btn.good{background:var(--good);color:#10271a}
+.btn.warn{background:var(--warn);color:#2b1b00}
+.btn.bad{background:var(--bad);color:#2b1010}
+.btn.full{width:100%}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.practice-box{text-align:center;padding:10px 0}
+.big-status{font-size:clamp(1.7rem,7vw,3.2rem);font-weight:950;margin:8px 0}
+.timer{font-size:clamp(3rem,13vw,6rem);font-weight:950;font-variant-numeric:tabular-nums;letter-spacing:-.04em}
+.progress{height:8px;border-radius:999px;background:#21182b;overflow:hidden;margin:18px auto;max-width:570px}
+.progress>div{height:100%;width:0;background:linear-gradient(90deg,#7b5aa6,#c7aaf0);transition:width .35s ease}
+.target-id{display:inline-block;font-size:clamp(2rem,9vw,4.7rem);font-weight:950;letter-spacing:.05em;padding:16px 20px;border-radius:17px;background:#0c0910;border:1px solid #5b466e;margin:10px 0}
+.target-photo{display:block;width:100%;max-height:560px;object-fit:cover;border-radius:18px;border:1px solid #4c3a5e;background:#09070c}
+.actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:15px}
+.fine{font-size:.86rem;color:#978fa1;line-height:1.55}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
+.stat{background:#0e0a13;border:1px solid #33283e;border-radius:14px;padding:12px;text-align:center}
+.stat b{font-size:1.35rem;display:block}.stat span{font-size:.72rem;color:#948a9f;text-transform:uppercase;font-weight:850}
+.hidden{display:none!important}
+.worksheet-preview{background:white;color:#23192f;border-radius:18px;padding:24px;text-align:left}
+.worksheet-preview h3{color:#2a1b3d}.worksheet-preview p{color:#4a4351}
+.storage{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.storage .card strong{display:block;color:#e5d9ff;margin-bottom:5px}
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.72);display:grid;place-items:center;padding:20px;z-index:100}
+.modal{width:min(560px,100%);background:#17101f;border:1px solid #5c4770;border-radius:22px;padding:22px;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.modal h2{margin-top:0}.modal p{color:#c7becf;line-height:1.6}
+.test-controls{margin-top:14px;padding:12px;border:1px dashed #624c75;border-radius:13px}
+@media(max-width:720px){
+ .grid2,.storage{grid-template-columns:1fr}
+ .panel{padding:16px}
+ .stats{grid-template-columns:repeat(2,1fr)}
+ .tabs{gap:5px;padding:7px}.tab{font-size:.84rem;padding:11px 5px}
+}
+</style>
+</head>
+<body>
+<main class="shell">
+<section class="hero">
+  <span class="badge">PRIVATE VERSION 1 - TEST BUILD</span>
+  <h1>Remote Viewing 101</h1>
+  <p>Learn the method, settle yourself before each session, work on paper, then reveal a real photo target only after you finish.</p>
+</section>
+
+<nav class="tabs" aria-label="Remote Viewing 101 sections">
+  <button class="tab active" type="button" data-tab="learn">Learn</button>
+  <button class="tab" type="button" data-tab="practice">Practice Targets</button>
+  <button class="tab" type="button" data-tab="worksheet">Worksheet</button>
+</nav>
+
+<section id="learn" class="view active">
+  <div class="panel">
+    <h2>What remote viewing is</h2>
+    <p>Remote viewing is a structured attempt to describe a target that is hidden from you through normal sensory means. You are not trying to name the target as quickly as possible. You are trying to notice simple information first: shape, temperature, color, texture, movement, size, sound, atmosphere, and spatial relationships.</p>
+    <div class="callout"><strong>My way, not the only way:</strong> this course gives you a structure to start with. Once you understand the process, use what actually helps you. You do not have to copy somebody else's exact ritual forever.</div>
+  </div>
+
+  <div class="panel">
+    <h2>Before every session</h2>
+    <div class="grid2">
+      <div class="card"><h3>1. Get physically comfortable</h3><p>Sit somewhere you can write and sketch. Reduce interruptions. You want quiet and alert, not half asleep.</p></div>
+      <div class="card"><h3>2. Settle for at least five minutes</h3><p>Breathing, grounding, stillness, or soft focus are all fine. The practice tab deliberately keeps the target ID hidden for the first five minutes.</p></div>
+      <div class="card"><h3>3. Drop the pressure</h3><p>You do not have to identify the target. Notice what comes first. A few simple impressions can be more useful than a dramatic guess.</p></div>
+      <div class="card"><h3>4. Work on paper</h3><p>The website gives the target and feedback. Your actual session belongs on the printable worksheet so you can write naturally and make quick sketches.</p></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>Raw impression vs. AOL</h2>
+    <p><strong>Raw impression:</strong> tall, metallic, open underneath, repeating vertical lines, cool, outdoor.</p>
+    <p><strong>AOL (Analytical Overlay):</strong> “bridge.”</p>
+    <p>If your brain suddenly names the target, write the guess in the AOL area of the worksheet, then go back to describing. The guess can be wrong while several raw impressions are still useful.</p>
+  </div>
+
+  <div class="panel">
+    <h2>Your basic session flow</h2>
+    <div class="grid2">
+      <div class="card"><h3>Settle</h3><p>Press Begin Session and spend at least five quiet minutes before the target number becomes available.</p></div>
+      <div class="card"><h3>Receive the blind ID</h3><p>You will get a meaningless number such as <strong>RV-4827-1936</strong>. It tells you nothing about the target.</p></div>
+      <div class="card"><h3>View on paper</h3><p>Use the worksheet: first impression, gestalt, sensory qualities, dimensions, movement, two quick sketches, AOL, and a raw summary.</p></div>
+      <div class="card"><h3>Reveal and compare</h3><p>Only when your paper session is finished do you reveal the target photo. Keep misses. Do not stretch vague notes into hits.</p></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>How much should you practice?</h2>
+    <p>I am not going to tell you that you are only “allowed” to do a certain number. Practice how you want. After your third completed session in a day, the app will simply remind you that taking a break might help you come back fresh. You can ignore that and keep going.</p>
+    <p class="fine">Remote viewing is experimental and has a disputed scientific history. Treat this as structured intuition practice, not a reliable way to make medical, legal, financial, safety, or other high-stakes decisions.</p>
+  </div>
+</section>
+
+<section id="practice" class="view">
+  <div class="panel">
+    <div class="practice-box">
+      <span class="badge">PAPER-FIRST PRACTICE</span>
+      <h2 style="margin:14px 0 5px">Practice Targets</h2>
+      <p class="fine">No impressions are typed into this page. Have your printed worksheet and a pen ready.</p>
+      <div id="practiceHome">
+        <div class="big-status">Ready when you are.</div>
+        <p id="todayLine" class="fine"></p>
+        <button id="beginSession" class="btn" type="button">Begin Session</button>
+      </div>
+
+      <div id="settling" class="hidden">
+        <div class="big-status">Settling period</div>
+        <p>Get comfortable. Breathe. Ground if that helps. Use soft focus or simple stillness. Do not try to figure out the target yet.</p>
+        <div class="timer" id="timer">5:00</div>
+        <div class="progress"><div id="progressBar"></div></div>
+        <p class="fine">There is no alarm. When five minutes is complete, stay here as long as you want.</p>
+        <button id="showId" class="btn hidden" type="button">Reveal Target ID When Ready</button>
+      </div>
+
+      <div id="idStage" class="hidden">
+        <div class="fine">Write this target ID at the top of your worksheet.</div>
+        <div class="target-id" id="targetId">RV-0000-0000</div>
+        <p>Work entirely on paper. Describe first. If your brain starts naming the target, put that guess in the AOL box and return to raw impressions.</p>
+        <button id="finishSession" class="btn" type="button">My Paper Session Is Finished - Reveal Target</button>
+      </div>
+
+      <div id="revealStage" class="hidden">
+        <div class="big-status">Feedback target</div>
+        <img id="targetPhoto" class="target-photo" alt="Remote viewing feedback target">
+        <p class="fine">Compare the photograph to what you actually wrote and drew before the reveal.</p>
+        <div class="actions" id="ratingButtons">
+          <button class="btn good" type="button" data-rating="strong">Strong Correspondence</button>
+          <button class="btn warn" type="button" data-rating="partial">Some Correspondence</button>
+          <button class="btn bad" type="button" data-rating="miss">Little / No Correspondence</button>
+        </div>
+      </div>
+
+      <div id="completeStage" class="hidden">
+        <div class="big-status">Session saved.</div>
+        <p class="fine">Your handwritten worksheet stays with you. The test site only remembers the target and the rating you selected.</p>
+        <button id="anotherSession" class="btn" type="button">Start Another Session</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Your local practice count</h3>
+    <div class="stats">
+      <div class="stat"><b id="todayCount">0</b><span>Today</span></div>
+      <div class="stat"><b id="allCount">0</b><span>Total</span></div>
+      <div class="stat"><b id="strongCount">0</b><span>Strong</span></div>
+      <div class="stat"><b id="partialCount">0</b><span>Some</span></div>
+    </div>
+    <div id="testControls" class="test-controls hidden">
+      <strong>Test shortcut is on.</strong>
+      <p class="fine">For testing only, the five-minute settling period is shortened to 10 seconds.</p>
+      <button id="resetTest" class="btn secondary" type="button">Reset Remote Viewing Test Data</button>
+    </div>
+  </div>
+</section>
+
+<section id="worksheet" class="view">
+  <div class="panel">
+    <h2>Remote Viewing 101 Worksheet</h2>
+    <p>The session is intentionally paper-first. Print several copies and keep them beside you before opening a practice target.</p>
+    <div class="worksheet-preview">
+      <h3>One-page session sheet</h3>
+      <p>Includes pre-session check, first impression, main gestalt, colors, temperature, texture, sounds, smells/tastes, light/atmosphere, shapes and dimensions, movement, two quick sketch boxes, AOL, raw summary, and after-reveal feedback.</p>
+    </div>
+    <div class="actions">
+      <a class="btn" href="Remote-Viewing-101-Worksheet.pdf" target="_blank" rel="noopener">Open Printable PDF</a>
+      <a class="btn secondary" href="Remote-Viewing-101-Worksheet.pdf" download>Download Worksheet</a>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>How the finished version will store targets</h2>
+    <div class="storage">
+      <div class="card"><strong>Cloudflare R2</strong><p>Stores the real target photographs and the printable worksheet file. Target images are not exposed in the public page before reveal.</p></div>
+      <div class="card"><strong>D1 database</strong><p>Stores target IDs, which R2 object belongs to each target, whether a target has been used, and small session metadata if we decide we need it.</p></div>
+      <div class="card"><strong>Worker API</strong><p>Acts as the locked door. Before the session is finished it returns only the blind target ID. After reveal, it returns the authorized image.</p></div>
+    </div>
+    <p class="fine"><strong>What we do not need to store:</strong> your handwritten worksheet, sketches, impressions, or AOL notes. Those can stay completely offline and private.</p>
+  </div>
+</section>
+</main>
+
+<div id="breakModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="breakTitle">
+  <div class="modal">
+    <h2 id="breakTitle">You have done three sessions today.</h2>
+    <p>Don't you think it might be time to take a break and come back fresh? If you want to keep going, that's completely up to you.</p>
+    <div class="actions">
+      <button id="takeBreak" class="btn secondary" type="button">Take a Break</button>
+      <button id="keepGoing" class="btn" type="button">Keep Practicing</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(()=>{
+const $=id=>document.getElementById(id);
+const TEST=new URLSearchParams(location.search).get('test')==='1';
+const MIN_SETTLE=TEST?10000:300000;
+const KEY='remoteViewing101PrivateV1';
+const TARGETS=[
+ ['RV-4827-1936','https://picsum.photos/seed/rv-water-01/1200/800'],
+ ['RV-7314-5208','https://picsum.photos/seed/rv-structure-02/1200/800'],
+ ['RV-2065-8841','https://picsum.photos/seed/rv-nature-03/1200/800'],
+ ['RV-9183-2746','https://picsum.photos/seed/rv-object-04/1200/800'],
+ ['RV-3652-7109','https://picsum.photos/seed/rv-open-05/1200/800'],
+ ['RV-1478-6325','https://picsum.photos/seed/rv-lines-06/1200/800'],
+ ['RV-8041-3597','https://picsum.photos/seed/rv-motion-07/1200/800'],
+ ['RV-5936-1284','https://picsum.photos/seed/rv-scale-08/1200/800'],
+ ['RV-2719-8453','https://picsum.photos/seed/rv-texture-09/1200/800'],
+ ['RV-6504-2178','https://picsum.photos/seed/rv-light-10/1200/800'],
+ ['RV-4398-7612','https://picsum.photos/seed/rv-space-11/1200/800'],
+ ['RV-7825-4061','https://picsum.photos/seed/rv-natural-12/1200/800'],
+ ['RV-1542-9387','https://picsum.photos/seed/rv-contrast-13/1200/800'],
+ ['RV-8260-5731','https://picsum.photos/seed/rv-angle-14/1200/800'],
+ ['RV-3107-6845','https://picsum.photos/seed/rv-depth-15/1200/800'],
+ ['RV-9751-2430','https://picsum.photos/seed/rv-shape-16/1200/800'],
+ ['RV-2486-7913','https://picsum.photos/seed/rv-color-17/1200/800'],
+ ['RV-6173-4529','https://picsum.photos/seed/rv-pattern-18/1200/800']
+];
+
+function dayKey(d=new Date()){return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
+function load(){try{return JSON.parse(localStorage.getItem(KEY)||'{}')}catch{return {}}}
+function normalize(d){
+  d.history=d.history||[];d.used=d.used||[];d.active=d.active||null;
+  d.day=d.day||{date:dayKey(),count:0,breakPrompted:false};
+  if(d.day.date!==dayKey())d.day={date:dayKey(),count:0,breakPrompted:false};
+  return d
+}
+function save(d){localStorage.setItem(KEY,JSON.stringify(d))}
+function randomIndex(max){const a=new Uint32Array(1);crypto.getRandomValues(a);return a[0]%max}
+function chooseTarget(d){
+  if(d.used.length>=TARGETS.length)d.used=[];
+  const available=TARGETS.map((_,i)=>i).filter(i=>!d.used.includes(i));
+  return available[randomIndex(available.length)];
+}
+function setStage(name){
+ ['practiceHome','settling','idStage','revealStage','completeStage'].forEach(id=>$(id).classList.toggle('hidden',id!==name))
+}
+function renderStats(){
+ const d=normalize(load()),h=d.history;
+ $('todayCount').textContent=d.day.count;
+ $('allCount').textContent=h.length;
+ $('strongCount').textContent=h.filter(x=>x.rating==='strong').length;
+ $('partialCount').textContent=h.filter(x=>x.rating==='partial').length;
+ $('todayLine').textContent=`Completed today: ${d.day.count}`;
+ save(d)
+}
+function startSession(){
+ const d=normalize(load());if(d.active)return resume();
+ const idx=chooseTarget(d),now=Date.now();
+ d.active={idx,startedAt:now,readyAt:now+MIN_SETTLE,idRevealed:false,revealed:false};
+ d.used.push(idx);save(d);setStage('settling');tick()
+}
+function tick(){
+ const d=normalize(load()),s=d.active;if(!s)return;
+ const left=Math.max(0,s.readyAt-Date.now());
+ const total=MIN_SETTLE,done=Math.min(1,(total-left)/total);
+ $('progressBar').style.width=(done*100).toFixed(1)+'%';
+ if(left>0){
+   const sec=Math.ceil(left/1000),m=Math.floor(sec/60),ss=String(sec%60).padStart(2,'0');
+   $('timer').textContent=`${m}:${ss}`;
+   $('showId').classList.add('hidden')
+ }else{
+   $('timer').textContent='Ready';
+   $('showId').classList.remove('hidden')
+ }
+}
+function revealId(){
+ const d=normalize(load());if(!d.active||Date.now()<d.active.readyAt)return;
+ d.active.idRevealed=true;save(d);resume()
+}
+function revealTarget(){
+ const d=normalize(load());if(!d.active||!d.active.idRevealed)return;
+ d.active.revealed=true;save(d);resume()
+}
+function rate(rating){
+ const d=normalize(load()),s=d.active;if(!s||!s.revealed)return;
+ const [id]=TARGETS[s.idx];
+ d.history.push({targetId:id,rating,completedAt:Date.now(),date:dayKey()});
+ d.day.count+=1;d.active=null;save(d);setStage('completeStage');renderStats();
+ if(d.day.count===3&&!d.day.breakPrompted){
+   d.day.breakPrompted=true;save(d);setTimeout(()=>$('breakModal').classList.remove('hidden'),200)
+ }
+}
+function resume(){
+ const d=normalize(load()),s=d.active;renderStats();
+ if(!s){setStage('practiceHome');return}
+ if(Date.now()<s.readyAt){setStage('settling');tick();return}
+ if(!s.idRevealed){setStage('settling');tick();return}
+ const [id,url]=TARGETS[s.idx];
+ $('targetId').textContent=id;
+ if(!s.revealed){setStage('idStage');return}
+ $('targetPhoto').src=url;setStage('revealStage')
+}
+function resetAll(){if(!confirm('Reset all Remote Viewing 101 test history on this browser?'))return;localStorage.removeItem(KEY);location.reload()}
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{
+ document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));
+ document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===b.dataset.tab));
+ if(b.dataset.tab==='practice')resume()
+}));
+$('beginSession').addEventListener('click',startSession);
+$('showId').addEventListener('click',revealId);
+$('finishSession').addEventListener('click',revealTarget);
+$('anotherSession').addEventListener('click',()=>{setStage('practiceHome');renderStats()});
+$('ratingButtons').addEventListener('click',e=>{const b=e.target.closest('[data-rating]');if(b)rate(b.dataset.rating)});
+$('takeBreak').addEventListener('click',()=>{$('breakModal').classList.add('hidden');document.querySelector('[data-tab="learn"]').click()});
+$('keepGoing').addEventListener('click',()=>{$('breakModal').classList.add('hidden');setStage('practiceHome')});
+$('resetTest').addEventListener('click',resetAll);
+if(TEST)$('testControls').classList.remove('hidden');
+renderStats();resume();setInterval(()=>{const d=normalize(load());if(d.active&&Date.now()<d.active.readyAt)tick();else if(d.active&&!d.active.idRevealed)tick()},500)
+})();
+</script>
+</body>
+</html>
