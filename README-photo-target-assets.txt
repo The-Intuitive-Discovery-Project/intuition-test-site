@@ -1,0 +1,1 @@
+Daily Hidden Target photo assets are curated free-use object photographs normalized for the test lab. Source pages are Unsplash photos under the Unsplash License. Production publication should keep hidden targets server-side until reveal time.
