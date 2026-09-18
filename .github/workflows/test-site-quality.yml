@@ -35,10 +35,14 @@ jobs:
       - name: Validate public test-site and Sound Intuition contracts
         run: node tests/test-site-quality.mjs
 
+      - name: Validate Delayed Validation Lab buttons
+        run: node tests/lab-button-smoke.mjs
+
       - name: Validate JavaScript syntax
         run: |
           node --check scripts/apply-test-site-quality.mjs
           node --check tests/test-site-quality.mjs
+          node --check tests/lab-button-smoke.mjs
           node --check sound-intuition/app.js
 
       - name: Validate generated diff formatting
@@ -63,7 +67,7 @@ jobs:
             exit 0
           fi
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.email "4189828+github-actions[bot]@users.noreply.github.com"
           git add -- '*.html' '*/index.html' robots.txt
           git commit -m "[test-site-bot] Apply test-site indexing safeguards"
           git push origin HEAD:${{ github.ref_name }}
