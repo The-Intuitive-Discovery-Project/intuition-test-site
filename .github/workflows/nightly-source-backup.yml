@@ -18,4 +18,4 @@ jobs:
     uses: The-Intuitive-Discovery-Project/cloudflare-automation/.github/workflows/reusable-repository-backup.yml@main
     with:
       artifact_prefix: intuition-test-site
-      retention_days: 30
+      retention_days: 15
