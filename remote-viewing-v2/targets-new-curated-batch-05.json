@@ -1,0 +1,128 @@
+[
+  {
+    "id": "RV-7421-6390",
+    "name": "Pine Gap",
+    "place": "near Alice Springs, Northern Territory, Australia",
+    "source": "RVHungary / RemoteViewing.hu Places on Earth practice target archive",
+    "sourceUrl": "https://remoteviewing.hu/rv-targets/",
+    "originalRef": "KHL46",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pine%20Gap%20by%20Skyring.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Pine_Gap_by_Skyring.jpg",
+      "fileTitle": "Pine Gap by Skyring.jpg",
+      "credit": "Skyring",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "note": "Independent Wikimedia Commons aerial feedback photo showing the Pine Gap facility and surrounding terrain."
+    }
+  },
+  {
+    "id": "RV-1843-5628",
+    "name": "Hoia-Baciu Forest",
+    "place": "Cluj-Napoca, Romania",
+    "source": "RVHungary / RemoteViewing.hu Places on Earth practice target archive",
+    "sourceUrl": "https://remoteviewing.hu/rv-targets/",
+    "originalRef": "E54Q",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Padurea%20Hoia%20%288155318927%29.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Padurea_Hoia_(8155318927).jpg",
+      "fileTitle": "Padurea Hoia (8155318927).jpg",
+      "credit": "Cristian Bortes",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "note": "Independent Wikimedia Commons feedback photo taken within Hoia Forest near Cluj-Napoca."
+    }
+  },
+  {
+    "id": "RV-9154-3267",
+    "name": "San Bernard National Wildlife Refuge",
+    "place": "Texas, USA",
+    "source": "RVHungary / RemoteViewing.hu Places on Earth practice target archive",
+    "sourceUrl": "https://remoteviewing.hu/rv-targets/",
+    "originalRef": "330EL",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Bernard%20National%20Wildlife%20Refuge%2C%20Brazoria%20County%2C%20Texas%2C%20USA%20%2812%20December%202016%29.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:San_Bernard_National_Wildlife_Refuge,_Brazoria_County,_Texas,_USA_(12_December_2016).jpg",
+      "fileTitle": "San Bernard National Wildlife Refuge, Brazoria County, Texas, USA (12 December 2016).jpg",
+      "credit": "William L. Farr",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "note": "Independent Wikimedia Commons feedback photo showing Gulf coastal grassland and prairie habitat inside San Bernard National Wildlife Refuge."
+    }
+  },
+  {
+    "id": "RV-2730-8841",
+    "name": "Guiana Space Centre",
+    "place": "Kourou, French Guiana",
+    "source": "RVHungary / RemoteViewing.hu Places on Earth practice target archive",
+    "sourceUrl": "https://remoteviewing.hu/rv-targets/",
+    "originalRef": "15UL",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Centre%20spatial%20guyanais%20-%20MSG-4%20on%20the%20launchpad%20-%2019707126322.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Centre_spatial_guyanais_-_MSG-4_on_the_launchpad_-_19707126322.jpg",
+      "fileTitle": "Centre spatial guyanais - MSG-4 on the launchpad - 19707126322.jpg",
+      "credit": "ESA / M. Shafiq",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "note": "Independent Wikimedia Commons feedback photo showing an Ariane launch vehicle on the pad at the Guiana Space Centre."
+    }
+  },
+  {
+    "id": "RV-8306-2145",
+    "name": "Pyongyang",
+    "place": "North Korea",
+    "source": "RVHungary / RemoteViewing.hu Places on Earth practice target archive",
+    "sourceUrl": "https://remoteviewing.hu/rv-targets/",
+    "originalRef": "101TB",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pyongyang%20Panorama.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Pyongyang_Panorama.jpg",
+      "fileTitle": "Pyongyang Panorama.jpg",
+      "credit": "Nicor",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "note": "Independent Wikimedia Commons panoramic feedback photo showing Pyongyang and the Taedong River."
+    }
+  },
+  {
+    "id": "RV-6642-3901",
+    "name": "Lisbon Airport (Humberto Delgado Airport)",
+    "place": "Lisbon, Portugal",
+    "source": "RVHungary / RemoteViewing.hu Places on Earth practice target archive",
+    "sourceUrl": "https://remoteviewing.hu/rv-targets/",
+    "originalRef": "6UJ",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Aeroporto%20Humberto%20Delgado%20%28Portela%20Airport%29%20Lisbon%2C%20Portugal%20%2851325016679%29.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Aeroporto_Humberto_Delgado_(Portela_Airport)_Lisbon,_Portugal_(51325016679).jpg",
+      "fileTitle": "Aeroporto Humberto Delgado (Portela Airport) Lisbon, Portugal (51325016679).jpg",
+      "credit": "Sharon Hahn Darlin",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "note": "Independent Wikimedia Commons feedback photo taken at Humberto Delgado Airport in Lisbon."
+    }
+  },
+  {
+    "id": "RV-5074-6319",
+    "name": "Nuuk",
+    "place": "Greenland",
+    "source": "RVHungary / RemoteViewing.hu Places on Earth practice target archive",
+    "sourceUrl": "https://remoteviewing.hu/rv-targets/",
+    "originalRef": "MB221",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Nuuk%20Panorama%20image.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Nuuk_Panorama_image.jpg",
+      "fileTitle": "Nuuk Panorama image.jpg",
+      "credit": "Paul Cziko (Pcziko)",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "note": "Independent Wikimedia Commons panoramic feedback photo showing Nuuk, surrounding mountains, and coastal setting."
+    }
+  }
+]
