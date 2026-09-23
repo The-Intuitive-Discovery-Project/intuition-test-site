@@ -1,0 +1,578 @@
+[
+  {
+    "id": "RV-6047-3524",
+    "name": "Bakong Temple",
+    "place": "near Angkor, Cambodia",
+    "source": "International School of Clairvoyance - Location Target 1",
+    "sourceUrl": "https://www.debrakatz.com/en/location-target1",
+    "originalRef": "Location 1",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bakong%20%289719139071%29.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Bakong_(9719139071).jpg",
+      "fileTitle": "Bakong (9719139071).jpg",
+      "credit": "Gary Todd",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Representative feedback photo of the Bakong temple site."
+    }
+  },
+  {
+    "id": "RV-1826-8064",
+    "name": "Coffin Bay Oyster Farm",
+    "place": "Coffin Bay, South Australia",
+    "source": "International School of Clairvoyance - Location Target 2",
+    "sourceUrl": "https://www.debrakatz.com/en/location-target2",
+    "originalRef": "Location 2",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Coffin%20Bay%20oyster%20beds%2C%202017%20%2801%29.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Coffin_Bay_oyster_beds,_2017_(01).jpg",
+      "fileTitle": "Coffin Bay oyster beds, 2017 (01).jpg",
+      "credit": "Bahnfrend",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "note": "Representative feedback photo of the Coffin Bay oyster beds."
+    }
+  },
+  {
+    "id": "RV-6768-6329",
+    "name": "Heceta Head Lighthouse",
+    "place": "Oregon coast, USA",
+    "source": "International School of Clairvoyance - Location Target 3",
+    "sourceUrl": "https://www.debrakatz.com/en/location-target3",
+    "originalRef": "Location 3",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/HecetaHeadLighthouse.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:HecetaHeadLighthouse.jpg",
+      "fileTitle": "HecetaHeadLighthouse.jpg",
+      "credit": "HISE Studios / Howcheng",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:HecetaHeadLighthouse.jpg",
+      "note": "Representative feedback photo of Heceta Head Lighthouse and its coastal setting."
+    }
+  },
+  {
+    "id": "RV-4887-6513",
+    "name": "Little A'Le'Inn property",
+    "place": "Rachel, Nevada, USA",
+    "source": "International School of Clairvoyance - Location Target 4",
+    "sourceUrl": "https://www.debrakatz.com/en/location-target4",
+    "originalRef": "Location 4",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Little%20A%27Le%27Inn%20Rachel%20NV%202.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Little_A%27Le%27Inn_Rachel_NV_2.jpg",
+      "fileTitle": "Little A'Le'Inn Rachel NV 2.jpg",
+      "credit": "Cooper.ch",
+      "license": "CC BY-SA 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+      "note": "Representative feedback photo of the Little A'Le'Inn property viewed from the north."
+    }
+  },
+  {
+    "id": "RV-3465-7906",
+    "name": "Stonehenge",
+    "place": "Wiltshire, England",
+    "source": "International School of Clairvoyance - Location Target 5",
+    "sourceUrl": "https://www.debrakatz.com/en/location-target5",
+    "originalRef": "Location 5",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Stonehenge-England.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Stonehenge-England.jpg",
+      "fileTitle": "Stonehenge-England.jpg",
+      "credit": "Guenter Wieschendahl",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Stonehenge-England.jpg",
+      "note": "Representative feedback photo showing the Stonehenge stone circle."
+    }
+  },
+  {
+    "id": "RV-8662-6563",
+    "name": "La Tzoumaz ski area",
+    "place": "Valais, Switzerland",
+    "source": "International School of Clairvoyance - Location Target 6",
+    "sourceUrl": "https://www.debrakatz.com/en/location-target6",
+    "originalRef": "Location 6",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/La%20Tzoumaz.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:La_Tzoumaz.jpg",
+      "fileTitle": "La Tzoumaz.jpg",
+      "credit": "Valaistourisme",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "note": "Representative feedback photo of the La Tzoumaz mountain/ski setting."
+    }
+  },
+  {
+    "id": "RV-9468-1576",
+    "name": "Roman Colosseum",
+    "place": "Rome, Italy",
+    "source": "International School of Clairvoyance - Location Target 7",
+    "sourceUrl": "https://www.debrakatz.com/en/location-target7",
+    "originalRef": "Location 7",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Exterior%20of%20Roman%20Colosseum.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Exterior_of_Roman_Colosseum.jpg",
+      "fileTitle": "Exterior of Roman Colosseum.jpg",
+      "credit": "Formermanas",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "note": "Representative feedback photo of the Colosseum exterior."
+    }
+  },
+  {
+    "id": "RV-2217-3869",
+    "name": "Haunted Mansion at Disneyland",
+    "place": "Anaheim, California, USA",
+    "source": "International School of Clairvoyance - Location Target 8",
+    "sourceUrl": "https://www.debrakatz.com/en/location-target8",
+    "originalRef": "Location 8",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Haunted%20Mansion%20Exterior.JPG?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Haunted_Mansion_Exterior.JPG",
+      "fileTitle": "Haunted Mansion Exterior.JPG",
+      "credit": "SolarSurfer",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Haunted_Mansion_Exterior.JPG",
+      "note": "Representative feedback photo of the Haunted Mansion exterior at Disneyland."
+    }
+  },
+  {
+    "id": "RV-9791-4363",
+    "name": "U.S. Marine Corps War Memorial",
+    "place": "Arlington, Virginia, USA",
+    "source": "International School of Clairvoyance - Location Target 9",
+    "sourceUrl": "https://www.debrakatz.com/en/location-target9",
+    "originalRef": "Location 9",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/MarineCorpsWarMemorial.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:MarineCorpsWarMemorial.jpg",
+      "fileTitle": "MarineCorpsWarMemorial.jpg",
+      "credit": "Contestsnowy",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "note": "Representative feedback photo of the Marine Corps War Memorial at Arlington Ridge Park."
+    }
+  },
+  {
+    "id": "RV-1468-2655",
+    "name": "Butchart Gardens",
+    "place": "Brentwood Bay, British Columbia, Canada",
+    "source": "International School of Clairvoyance - Location Target 10",
+    "sourceUrl": "https://www.debrakatz.com/en/location-target10",
+    "originalRef": "Location 10",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Butchart%20Sunken%20Gardens.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Butchart_Sunken_Gardens.jpg",
+      "fileTitle": "Butchart Sunken Gardens.jpg",
+      "credit": "Warfieldian",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "note": "Representative feedback photo of the Sunken Garden at Butchart Gardens."
+    }
+  },
+  {
+    "id": "RV-1937-2462",
+    "name": "Space Needle",
+    "place": "Seattle, Washington, USA",
+    "source": "RVIS Target Vault",
+    "sourceUrl": "https://rviewer.com/the-target-vault-remote-viewing-practice-targets-for-everyone/",
+    "originalRef": "200325621",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Space%20needle%20in%20Seattle.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Space_needle_in_Seattle.jpg",
+      "fileTitle": "Space needle in Seattle.jpg",
+      "credit": "Kenna Tolman",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "note": "Representative feedback photo of the Space Needle."
+    }
+  },
+  {
+    "id": "RV-9173-1258",
+    "name": "Goosenecks of the San Juan",
+    "place": "Utah, USA",
+    "source": "RVIS Target Vault",
+    "sourceUrl": "https://rviewer.com/the-target-vault-remote-viewing-practice-targets-for-everyone/",
+    "originalRef": "200421437",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Goosenecks%20of%20the%20San%20Juan%2C%20Utah.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Goosenecks_of_the_San_Juan,_Utah.jpg",
+      "fileTitle": "Goosenecks of the San Juan, Utah.jpg",
+      "credit": "Doc Searls (dsearls)",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "note": "Representative feedback photo of the deeply incised San Juan River meanders."
+    }
+  },
+  {
+    "id": "RV-7523-4163",
+    "name": "Devil's Den",
+    "place": "Gettysburg Battlefield, Pennsylvania, USA",
+    "source": "RVIS Target Vault",
+    "sourceUrl": "https://rviewer.com/the-target-vault-remote-viewing-practice-targets-for-everyone/",
+    "originalRef": "200630793",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Devil%27s%20Den%2C%20Gettysburg.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Devil%27s_Den,_Gettysburg.jpg",
+      "fileTitle": "Devil's Den, Gettysburg.jpg",
+      "credit": "LeapingLion",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "note": "Representative feedback photo of the boulder-strewn Devil's Den site at Gettysburg."
+    }
+  },
+  {
+    "id": "RV-4378-9454",
+    "name": "Hochzeitsturm (Marriage Tower)",
+    "place": "Darmstadt, Germany",
+    "source": "RVIS Target Vault",
+    "sourceUrl": "https://rviewer.com/the-target-vault-remote-viewing-practice-targets-for-everyone/",
+    "originalRef": "210202448",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Hochzeitsturm%20in%20Darmstadt.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Hochzeitsturm_in_Darmstadt.jpg",
+      "fileTitle": "Hochzeitsturm in Darmstadt.jpg",
+      "credit": "Reiner Müller",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "note": "Representative feedback photo of the Hochzeitsturm on Mathildenhöhe."
+    }
+  },
+  {
+    "id": "RV-5560-1893",
+    "name": "Willis Creek Slot Canyon",
+    "place": "Grand Staircase-Escalante, Utah, USA",
+    "source": "RVIS Target Vault",
+    "sourceUrl": "https://rviewer.com/the-target-vault-remote-viewing-practice-targets-for-everyone/",
+    "originalRef": "210518818",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Willis%20Creek%20Slot%20Canyon%20%2854089031043%29.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Willis_Creek_Slot_Canyon_(54089031043).jpg",
+      "fileTitle": "Willis Creek Slot Canyon (54089031043).jpg",
+      "credit": "Cindy Gallo / Bureau of Land Management - Utah",
+      "license": "Public domain (U.S. federal government work)",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Willis_Creek_Slot_Canyon_(54089031043).jpg",
+      "note": "Representative feedback photo inside Willis Creek Slot Canyon."
+    }
+  },
+  {
+    "id": "RV-5430-6018",
+    "name": "Giant's Causeway",
+    "place": "County Antrim, Northern Ireland",
+    "source": "RVIS training example",
+    "sourceUrl": "https://rviewer.com/the-target-vault-remote-viewing-practice-targets-for-everyone/",
+    "originalRef": "Training example",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Giant%27s%20Causeway.png?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Giant%27s_Causeway.png",
+      "fileTitle": "Giant's Causeway.png",
+      "credit": "AboveHeights",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "note": "Representative feedback photo of the Giant's Causeway basalt columns and shoreline."
+    }
+  },
+  {
+    "id": "RV-5664-7079",
+    "name": "Pacific Science Center",
+    "place": "Seattle, Washington, USA",
+    "source": "RVIS CRV training example",
+    "sourceUrl": "https://rviewer.com/the-target-vault-remote-viewing-practice-targets-for-everyone/",
+    "originalRef": "Training example",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pacific%20Science%20Center%20Seattle%203.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Pacific_Science_Center_Seattle_3.jpg",
+      "fileTitle": "Pacific Science Center Seattle 3.jpg",
+      "credit": "Thayne Tuason",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "note": "Representative feedback photo of the Pacific Science Center complex."
+    }
+  },
+  {
+    "id": "RV-4840-9170",
+    "name": "Gateway Arch",
+    "place": "St. Louis, Missouri, USA",
+    "source": "STAR GATE training example archive",
+    "sourceUrl": "https://www.remoteviewed.com/star-gate-remote-viewing-examples/",
+    "originalRef": "St Louis Arch",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Gateway%20Arch-StLouis.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Gateway_Arch-StLouis.jpg",
+      "fileTitle": "Gateway Arch-StLouis.jpg",
+      "credit": "Tarthur4469",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "note": "Representative feedback photo of the Gateway Arch in St. Louis."
+    }
+  },
+  {
+    "id": "RV-3337-5650",
+    "name": "Vietnam Veterans Memorial",
+    "place": "Washington, D.C., USA",
+    "source": "STAR GATE training example archive",
+    "sourceUrl": "https://www.remoteviewed.com/star-gate-remote-viewing-examples/",
+    "originalRef": "Vietnam Vet Memorial",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Vietnam%20Veterans%20Memorial%20in%20Washington%2C%20D.C..jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Vietnam_Veterans_Memorial_in_Washington,_D.C..jpg",
+      "fileTitle": "Vietnam Veterans Memorial in Washington, D.C..jpg",
+      "credit": "hookbrother",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "note": "Representative feedback photo of the Vietnam Veterans Memorial in Washington, D.C."
+    }
+  },
+  {
+    "id": "RV-9292-5385",
+    "name": "Library of Congress",
+    "place": "Washington, D.C., USA",
+    "source": "STAR GATE training example archive",
+    "sourceUrl": "https://www.remoteviewed.com/star-gate-remote-viewing-examples/",
+    "originalRef": "Library of Congress",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/LibraryOfCongress-Exterior.JPG?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:LibraryOfCongress-Exterior.JPG",
+      "fileTitle": "LibraryOfCongress-Exterior.JPG",
+      "credit": "Bgwwlm",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "note": "Representative feedback photo of the Library of Congress exterior in Washington, D.C."
+    }
+  },
+  {
+    "id": "RV-5040-5785",
+    "name": "Bam",
+    "place": "Kerman Province, Iran",
+    "source": "STAR GATE training example archive",
+    "sourceUrl": "https://www.remoteviewed.com/star-gate-remote-viewing-examples/",
+    "originalRef": "Bam, Iran",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Arg%20e%20bam.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Arg_e_bam.jpg",
+      "fileTitle": "Arg e bam.jpg",
+      "credit": "Sadegh Mobarak",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "note": "Representative feedback photo of the Arg-e Bam citadel complex in Bam."
+    }
+  },
+  {
+    "id": "RV-6479-6055",
+    "name": "Devils Tower",
+    "place": "Wyoming, USA",
+    "source": "STAR GATE training example archive",
+    "sourceUrl": "https://www.remoteviewed.com/star-gate-remote-viewing-examples/",
+    "originalRef": "Devils Tower",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Devils%20Tower%20-%20Wyoming.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Devils_Tower_-_Wyoming.jpg",
+      "fileTitle": "Devils Tower - Wyoming.jpg",
+      "credit": "Land Cover Trends Field Photos / U.S. Geological Survey",
+      "license": "Public domain (USGS)",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Devils_Tower_-_Wyoming.jpg",
+      "note": "Representative feedback photo of Devils Tower and its surrounding landscape."
+    }
+  },
+  {
+    "id": "RV-4780-9492",
+    "name": "Golden Gate Bridge",
+    "place": "San Francisco, California, USA",
+    "source": "STAR GATE training example archive",
+    "sourceUrl": "https://www.remoteviewed.com/star-gate-remote-viewing-examples/",
+    "originalRef": "Golden Gate Bridge",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Golden%20Gate%20Bridge%20%28San%20Francisco%29.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_(San_Francisco).jpg",
+      "fileTitle": "Golden Gate Bridge (San Francisco).jpg",
+      "credit": "Supercarwaar",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "note": "Representative feedback photo of the Golden Gate Bridge in San Francisco."
+    }
+  },
+  {
+    "id": "RV-4547-2670",
+    "name": "Lake Titicaca floating village",
+    "place": "Lake Titicaca, Peru/Bolivia",
+    "source": "STAR GATE training example archive",
+    "sourceUrl": "https://www.remoteviewed.com/star-gate-remote-viewing-examples/",
+    "originalRef": "Lake Titicaca floating village",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Uros%20Floating%20Islands%2C%20Lake%20Titicaca%2C%20Peru.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Uros_Floating_Islands,_Lake_Titicaca,_Peru.jpg",
+      "fileTitle": "Uros Floating Islands, Lake Titicaca, Peru.jpg",
+      "credit": "Didier Moïse",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "note": "Representative feedback photo of the Uros floating islands on Lake Titicaca."
+    }
+  },
+  {
+    "id": "RV-8432-5600",
+    "name": "John F. Kennedy Center for the Performing Arts",
+    "place": "Washington, D.C., USA",
+    "source": "STAR GATE training example archive",
+    "sourceUrl": "https://www.remoteviewed.com/star-gate-remote-viewing-examples/",
+    "originalRef": "Kennedy Centre",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/KennedyCtr.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:KennedyCtr.jpg",
+      "fileTitle": "KennedyCtr.jpg",
+      "credit": "NOAA",
+      "license": "Public domain (NOAA)",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:KennedyCtr.jpg",
+      "note": "Representative feedback photo of the Kennedy Center viewed from the Potomac River."
+    }
+  },
+  {
+    "id": "RV-5465-7279",
+    "name": "Pikes Peak",
+    "place": "Colorado, USA",
+    "source": "STAR GATE training example archive",
+    "sourceUrl": "https://www.remoteviewed.com/star-gate-remote-viewing-examples/",
+    "originalRef": "Pikes Peak",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pikes%20Peak%20CO.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Pikes_Peak_CO.jpg",
+      "fileTitle": "Pikes Peak CO.jpg",
+      "credit": "Hogs555",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "note": "Representative feedback photo of Pikes Peak."
+    }
+  },
+  {
+    "id": "RV-2815-2084",
+    "name": "Westminster Abbey",
+    "place": "London, England",
+    "source": "STAR GATE training example archive",
+    "sourceUrl": "https://www.remoteviewed.com/star-gate-remote-viewing-examples/",
+    "originalRef": "Westminster Abbey",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Westminster%20abbey%20london.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Westminster_abbey_london.jpg",
+      "fileTitle": "Westminster abbey london.jpg",
+      "credit": "Tina0t",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "note": "Representative feedback photo of Westminster Abbey in London."
+    }
+  },
+  {
+    "id": "RV-6297-3162",
+    "name": "Coney Island",
+    "place": "Brooklyn, New York, USA",
+    "source": "STAR GATE training example archive",
+    "sourceUrl": "https://www.remoteviewed.com/star-gate-remote-viewing-examples/",
+    "originalRef": "Coney Island",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Coney%20Island.%20Brooklyn%2C%20NYC.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Coney_Island._Brooklyn,_NYC.jpg",
+      "fileTitle": "Coney Island. Brooklyn, NYC.jpg",
+      "credit": "Adjoajo",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "note": "Representative feedback photo of Coney Island in Brooklyn."
+    }
+  },
+  {
+    "id": "RV-2506-5034",
+    "name": "Khyber Pass",
+    "place": "Afghanistan-Pakistan border region",
+    "source": "STAR GATE training example archive",
+    "sourceUrl": "https://www.remoteviewed.com/star-gate-remote-viewing-examples/",
+    "originalRef": "Khyber Pass",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Khyber-Pass.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Khyber-Pass.jpg",
+      "fileTitle": "Khyber-Pass.jpg",
+      "credit": "Robert Kropf",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Khyber-Pass.jpg",
+      "note": "Representative feedback photo of the Khyber Pass landscape."
+    }
+  },
+  {
+    "id": "RV-2273-4446",
+    "name": "Nazca Lines",
+    "place": "Nazca Desert, Peru",
+    "source": "STAR GATE training example archive",
+    "sourceUrl": "https://www.remoteviewed.com/star-gate-remote-viewing-examples/",
+    "originalRef": "Nazca Lines",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Nazca%20Lines%2C%20Peru%20%2811341413654%29.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Nazca_Lines,_Peru_(11341413654).jpg",
+      "fileTitle": "Nazca Lines, Peru (11341413654).jpg",
+      "credit": "M M from Switzerland",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "note": "Representative feedback photo of the Nazca Lines in Peru."
+    }
+  },
+  {
+    "id": "RV-6724-3810",
+    "name": "Mount Rushmore",
+    "place": "South Dakota, USA",
+    "source": "STAR GATE training example archive",
+    "sourceUrl": "https://www.remoteviewed.com/star-gate-remote-viewing-examples/",
+    "originalRef": "Mount Rushmore",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount%20Rushmore%20from%20a%20distance.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Mount_Rushmore_from_a_distance.jpg",
+      "fileTitle": "Mount Rushmore from a distance.jpg",
+      "credit": "Tiggr222",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "note": "Representative feedback photo showing Mount Rushmore and the surrounding mountain setting."
+    }
+  },
+  {
+    "id": "RV-7600-4639",
+    "name": "Leaning Tower of Pisa",
+    "place": "Pisa, Italy",
+    "source": "STAR GATE training example archive",
+    "sourceUrl": "https://www.remoteviewed.com/star-gate-remote-viewing-examples/",
+    "originalRef": "Leaning Tower of Pisa",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pisa%20tower.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Pisa_tower.jpg",
+      "fileTitle": "Pisa tower.jpg",
+      "credit": "Silviomerci1971",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "note": "Representative feedback photo of the Leaning Tower of Pisa."
+    }
+  }
+]
