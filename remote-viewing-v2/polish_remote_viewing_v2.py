@@ -13,12 +13,23 @@ replacements = {
         "TOTAL_INVENTORY=200;let TARGETS=[];",
     "if(!Array.isArray(TARGETS)||!TARGETS.length)throw new Error('Empty target bank');":
         "if(!Array.isArray(TARGETS)||TARGETS.length!==TOTAL_INVENTORY)throw new Error('Target bank count mismatch: '+(Array.isArray(TARGETS)?TARGETS.length:'invalid'));",
+    "2. Take at least five quiet minutes":
+        "2. Take 2 quiet minutes",
+    '<div class="timer" id="timer">5:00</div>':
+        '<div class="timer" id="timer">2:00</div>',
+    "When the five-minute minimum is complete":
+        "When the two-minute minimum is complete",
+    "Normal V2 uses the full five-minute minimum.":
+        "Normal V2 uses the full two-minute minimum.",
+    "MIN_SETTLE=TEST?10000:300000":
+        "MIN_SETTLE=TEST?10000:120000",
 }
 
 for old, new in replacements.items():
-    if old not in text:
+    if old in text:
+        text = text.replace(old, new, 1)
+    elif new not in text:
         raise SystemExit(f"Expected index.html text not found: {old[:100]}")
-    text = text.replace(old, new, 1)
 
 path.write_text(text, encoding="utf-8", newline="\n")
-print("PASS: Remote Viewing V2 page polished for the audited 200-target bank.")
+print("PASS: Remote Viewing V2 page polished for the audited 200-target bank and 2-minute settling period.")
