@@ -1,0 +1,21 @@
+name: Nightly Source Backup - Intuition Test Site
+
+on:
+  schedule:
+    - cron: '5 8 * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/nightly-source-backup.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  backup:
+    uses: The-Intuitive-Discovery-Project/cloudflare-automation/.github/workflows/reusable-repository-backup.yml@main
+    with:
+      artifact_prefix: intuition-test-site
+      retention_days: 30
