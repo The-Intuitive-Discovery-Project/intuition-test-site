@@ -1,0 +1,290 @@
+[
+  {
+    "id": "RV-6184-2507",
+    "name": "National September 11 Memorial",
+    "place": "New York City, New York, USA",
+    "source": "RemoteViewed / Daz Smith 2021 training target archive",
+    "sourceUrl": "https://www.remoteviewed.com/wp-content/uploads/2021/03/1231-2203.pdf",
+    "originalRef": "1231-2203",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/National%20September%2011th%20Memorial%20091.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:National_September_11th_Memorial_091.jpg",
+      "fileTitle": "National September 11th Memorial 091.jpg",
+      "credit": "Kidfly182",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "note": "Independent Wikimedia Commons feedback photo of the National September 11 Memorial."
+    }
+  },
+  {
+    "id": "RV-3485-9162",
+    "name": "Christ the Redeemer",
+    "place": "Rio de Janeiro, Brazil",
+    "source": "RemoteViewed / Daz Smith 2021 training target archive",
+    "sourceUrl": "https://www.remoteviewed.com/wp-content/uploads/2021/03/2021-1281.pdf",
+    "originalRef": "2021-1281",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Christ%20the%20Redeemer%20at%20Rio.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Christ_the_Redeemer_at_Rio.jpg",
+      "fileTitle": "Christ the Redeemer at Rio.jpg",
+      "credit": "Surance",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "note": "Independent Wikimedia Commons feedback photo of the Christ the Redeemer statue."
+    }
+  },
+  {
+    "id": "RV-7269-1148",
+    "name": "Burj Khalifa",
+    "place": "Dubai, United Arab Emirates",
+    "source": "RemoteViewed / Daz Smith 2021 training target archive",
+    "sourceUrl": "https://www.remoteviewed.com/wp-content/uploads/2021/03/2021-1291.pdf",
+    "originalRef": "2021-1291",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Burj%20Khalifa%20Image.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Burj_Khalifa_Image.jpg",
+      "fileTitle": "Burj Khalifa Image.jpg",
+      "credit": "Meandmybrix",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "note": "Independent Wikimedia Commons feedback photo of Burj Khalifa."
+    }
+  },
+  {
+    "id": "RV-4096-5731",
+    "name": "Mount Etna",
+    "place": "Sicily, Italy",
+    "source": "RemoteViewed / Daz Smith 2021 training target archive",
+    "sourceUrl": "https://www.remoteviewed.com/wp-content/uploads/2021/03/2021-3211.pdf",
+    "originalRef": "2021-3211",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Sicily%20with%20Mount%20Etna.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Sicily_with_Mount_Etna.jpg",
+      "fileTitle": "Sicily with Mount Etna.jpg",
+      "credit": "NASA",
+      "license": "Public domain (NASA)",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Sicily_with_Mount_Etna.jpg",
+      "note": "Independent Wikimedia Commons NASA feedback image showing Sicily and active Mount Etna."
+    }
+  },
+  {
+    "id": "RV-9512-3074",
+    "name": "Krakatoa (Anak Krakatau)",
+    "place": "Sunda Strait, Indonesia",
+    "source": "RemoteViewed / Daz Smith 2021 training target archive",
+    "sourceUrl": "https://www.remoteviewed.com/wp-content/uploads/2021/03/2021-3321.pdf",
+    "originalRef": "2021-3321",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Anak%20Krakatoa%202026-09-05%200648Z.png?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Anak_Krakatoa_2026-09-05_0648Z.png",
+      "fileTitle": "Anak Krakatoa 2026-09-05 0648Z.png",
+      "credit": "VIIRS imagery from NASA's NOAA-20 Satellite",
+      "license": "Public domain (NASA/NOAA)",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Anak_Krakatoa_2026-09-05_0648Z.png",
+      "note": "Independent Wikimedia Commons satellite feedback image showing Anak Krakatau and its eruption plume."
+    }
+  },
+  {
+    "id": "RV-5821-6403",
+    "name": "Chrysler Building",
+    "place": "New York City, New York, USA",
+    "source": "RemoteViewed / Daz Smith 2021 training target archive",
+    "sourceUrl": "https://www.remoteviewed.com/wp-content/uploads/2021/03/2021-3331.pdf",
+    "originalRef": "2021-3331",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Chrysler%20building.JPG?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Chrysler_building.JPG",
+      "fileTitle": "Chrysler building.JPG",
+      "credit": "Ypsilonatshared",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Chrysler_building.JPG",
+      "note": "Independent Wikimedia Commons feedback photo of the Chrysler Building."
+    }
+  },
+  {
+    "id": "RV-1175-8430",
+    "name": "Teotihuacan",
+    "place": "State of Mexico, Mexico",
+    "source": "RemoteViewed / Daz Smith 2021 training target archive",
+    "sourceUrl": "https://www.remoteviewed.com/wp-content/uploads/2021/03/2021-4111.pdf",
+    "originalRef": "2021-4111",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Teotihuacan%20Mexico.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Teotihuacan_Mexico.jpg",
+      "fileTitle": "Teotihuacan Mexico.jpg",
+      "credit": "MongeNajera",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "note": "Independent Wikimedia Commons feedback photo showing the archaeological complex at Teotihuacan."
+    }
+  },
+  {
+    "id": "RV-8650-2719",
+    "name": "Machu Picchu",
+    "place": "Cusco Region, Peru",
+    "source": "RemoteViewed / Daz Smith 2021 training target archive",
+    "sourceUrl": "https://www.remoteviewed.com/wp-content/uploads/2021/03/2021-4171.pdf",
+    "originalRef": "2021-4171",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Peru%20Machu%20Picchu.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Peru_Machu_Picchu.jpg",
+      "fileTitle": "Peru Machu Picchu.jpg",
+      "credit": "Entropy1963",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Peru_Machu_Picchu.jpg",
+      "note": "Independent Wikimedia Commons feedback photo showing Machu Picchu and its mountain setting."
+    }
+  },
+  {
+    "id": "RV-6348-5120",
+    "name": "Hollywood Sign",
+    "place": "Los Angeles, California, USA",
+    "source": "RemoteViewed / Daz Smith 2021 training target archive",
+    "sourceUrl": "https://www.remoteviewed.com/wp-content/uploads/2021/03/2021-4341.pdf",
+    "originalRef": "2021-4341",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/HollywoodSignLosAngeles.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:HollywoodSignLosAngeles.jpg",
+      "fileTitle": "HollywoodSignLosAngeles.jpg",
+      "credit": "Massimo Catarinella",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "note": "Independent Wikimedia Commons feedback photo of the Hollywood Sign and hillside."
+    }
+  },
+  {
+    "id": "RV-2934-7806",
+    "name": "Louvre Museum",
+    "place": "Paris, France",
+    "source": "RemoteViewed / Daz Smith 2021 training target archive",
+    "sourceUrl": "https://www.remoteviewed.com/wp-content/uploads/2021/03/2021-5151.pdf",
+    "originalRef": "2021-5151",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Louvre%20Pyramid%20and%20Cour%20Napol%C3%A9on%2C%20Paris.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Louvre_Pyramid_and_Cour_Napol%C3%A9on,_Paris.jpg",
+      "fileTitle": "Louvre Pyramid and Cour Napoléon, Paris.jpg",
+      "credit": "Aliva Sahoo",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "note": "Independent Wikimedia Commons feedback photo showing the Louvre Pyramid and historic museum buildings."
+    }
+  },
+  {
+    "id": "RV-7480-1936",
+    "name": "Dolomites",
+    "place": "Italy",
+    "source": "RemoteViewed / Daz Smith 2021 training target archive",
+    "sourceUrl": "https://www.remoteviewed.com/wp-content/uploads/2021/03/2021-5421.pdf",
+    "originalRef": "2021-5421",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Dolomites%20Italy.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Dolomites_Italy.jpg",
+      "fileTitle": "Dolomites Italy.jpg",
+      "credit": "Francesca.z73",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "note": "Independent Wikimedia Commons feedback photo showing the Dolomites mountain landscape."
+    }
+  },
+  {
+    "id": "RV-3216-9507",
+    "name": "Petra",
+    "place": "Jordan",
+    "source": "RemoteViewed / Daz Smith 2021 training target archive",
+    "sourceUrl": "https://www.remoteviewed.com/wp-content/uploads/2021/03/2021-6131.pdf",
+    "originalRef": "2021-6131",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Petra%20Treasury.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Petra_Treasury.jpg",
+      "fileTitle": "Petra Treasury.jpg",
+      "credit": "David Bjorgen",
+      "license": "CC BY-SA 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
+      "note": "Independent Wikimedia Commons feedback photo showing Petra's Treasury and surrounding sandstone."
+    }
+  },
+  {
+    "id": "RV-5568-1402",
+    "name": "Temple Mount",
+    "place": "Jerusalem",
+    "source": "RemoteViewed / Daz Smith 2021 training target archive",
+    "sourceUrl": "https://www.remoteviewed.com/wp-content/uploads/2021/03/2021-6671.pdf",
+    "originalRef": "2021-6671",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem-temple-mount-V4-281.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Jerusalem-temple-mount-V4-281.jpg",
+      "fileTitle": "Jerusalem-temple-mount-V4-281.jpg",
+      "credit": "Bukvoed",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "note": "Independent Wikimedia Commons feedback photo of the Temple Mount area in Jerusalem."
+    }
+  },
+  {
+    "id": "RV-9027-3641",
+    "name": "Christ of Vung Tau statue",
+    "place": "Vung Tau, Vietnam",
+    "source": "RemoteViewed / Daz Smith 2021 training target archive",
+    "sourceUrl": "https://www.remoteviewed.com/wp-content/uploads/2021/03/2021-7191.pdf",
+    "originalRef": "2021-7191",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/VN-vungtau-christus-statue.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:VN-vungtau-christus-statue.jpg",
+      "fileTitle": "VN-vungtau-christus-statue.jpg",
+      "credit": "Balou46",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "note": "Independent Wikimedia Commons feedback photo of the Christ of Vung Tau statue."
+    }
+  },
+  {
+    "id": "RV-4713-8285",
+    "name": "Arc de Triomphe",
+    "place": "Paris, France",
+    "source": "RemoteViewed / Daz Smith 2021 training target archive",
+    "sourceUrl": "https://www.remoteviewed.com/wp-content/uploads/2021/03/2021-7881.pdf",
+    "originalRef": "2021-7881",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Arc%20de%20Triomphe%20in%20Paris.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Arc_de_Triomphe_in_Paris.jpg",
+      "fileTitle": "Arc de Triomphe in Paris.jpg",
+      "credit": "Winfried Weithofer",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "note": "Independent Wikimedia Commons feedback photo of the Arc de Triomphe."
+    }
+  },
+  {
+    "id": "RV-6802-5994",
+    "name": "Mojave Air and Space Port aircraft boneyard",
+    "place": "Mojave, California, USA",
+    "source": "RemoteViewed / Daz Smith 2021 training target archive",
+    "sourceUrl": "https://www.remoteviewed.com/wp-content/uploads/2021/03/2021-9871.pdf",
+    "originalRef": "2021-9871",
+    "cue": "Describe the primary physical characteristics of the real site and its immediate surroundings.",
+    "feedback": {
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mojave%20Air%20and%20Space%20Port.jpg?width=1600",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Mojave_Air_and_Space_Port.jpg",
+      "fileTitle": "Mojave Air and Space Port.jpg",
+      "credit": "Matthew Dillon",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "note": "Independent Wikimedia Commons feedback photo showing stored commercial aircraft at Mojave Air and Space Port."
+    }
+  }
+]
