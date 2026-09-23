@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Remote Viewing Practice</title>
+<meta name="robots" content="noindex,nofollow">
+<style>
+*{box-sizing:border-box}
+:root{--bg:#09070d;--panel:#171020;--line:#4b3962;--text:#f8f5ff;--muted:#b8afc3;--purple:#a98ad8;--button:#e9ddff;--good:#c7f2d5;--warn:#ffe2a8;--bad:#ffd1d1}
+html{background:#07070a;min-height:100%}
+body{margin:0;min-height:100dvh;background:radial-gradient(circle at top,#2b1b43 0,#120c1b 38%,#08070b 72%);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.shell{width:min(900px,94%);margin:auto;padding:24px 0 74px}
+.hero{text-align:center;padding:24px 18px 12px}
+.badge{display:inline-block;padding:6px 10px;border:1px solid #755894;border-radius:999px;color:#dfd3ff;font-size:.75rem;font-weight:900;letter-spacing:.06em}
+.hero h1{font-size:clamp(2.2rem,9vw,4.3rem);margin:14px 0 8px;line-height:1}
+.hero p{max-width:680px;margin:auto;color:var(--muted);line-height:1.6}
+.panel{background:linear-gradient(180deg,rgba(25,17,34,.98),rgba(14,11,20,.98));border:1px solid #3d3049;border-radius:22px;padding:20px;margin-top:16px}
+.practice{text-align:center}
+.bank{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;color:var(--muted)}
+.bank strong{font-size:1.65rem;color:var(--text)}
+.big-status{font-size:clamp(1.7rem,7vw,3rem);font-weight:950;margin:12px 0}
+.timer{font-size:clamp(3rem,14vw,6rem);font-weight:950;font-variant-numeric:tabular-nums;letter-spacing:-.04em}
+.progress{height:8px;border-radius:999px;background:#21182b;overflow:hidden;margin:18px auto;max-width:580px}
+.progress>div{height:100%;width:0;background:linear-gradient(90deg,#7b5aa6,#c7aaf0);transition:width .35s ease}
+.target-id{display:inline-block;font-size:clamp(2rem,10vw,4.6rem);font-weight:950;letter-spacing:.05em;padding:16px 20px;border-radius:17px;background:#0c0910;border:1px solid #5b466e;margin:10px 0}
+.btn{display:inline-block;text-decoration:none;border:0;border-radius:14px;padding:14px 18px;background:var(--button);color:#1b1027;font:inherit;font-weight:950;cursor:pointer}
+.btn.secondary{background:#271d32;color:#fff;border:1px solid #5b476e}
+.btn.good{background:var(--good);color:#10271a}
+.btn.warn{background:var(--warn);color:#2b1b00}
+.btn.bad{background:var(--bad);color:#2b1010}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.hidden{display:none!important}
+.fine{font-size:.88rem;color:#9f96aa;line-height:1.55}
+.feedback{text-align:left;max-width:820px;margin:16px auto 0;background:#0d0a12;border:1px solid #4c3a5e;border-radius:18px;padding:18px}
+.feedback h2{font-size:clamp(1.6rem,6vw,2.4rem);margin:0 0 4px}
+.place{color:#d3c6df;font-weight:750}
+.feedback-image-wrap{margin:18px 0 10px;background:#050407;border:1px solid #382c46;border-radius:16px;overflow:hidden}
+.feedback-image{display:block;width:100%;max-height:560px;object-fit:contain;background:#050407}
+.photo-caption{padding:11px 13px;color:#aea4b9;font-size:.82rem;line-height:1.5;border-top:1px solid #30263b}
+.actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:16px}
+.source{margin-top:14px;border-top:1px solid #33283e;padding-top:12px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:18px}
+.stat{background:#0e0a13;border:1px solid #33283e;border-radius:14px;padding:12px;text-align:center}
+.stat b{font-size:1.35rem;display:block}.stat span{font-size:.7rem;color:#948a9f;text-transform:uppercase;font-weight:850}
+.loading{padding:18px;color:#c8bdd1}.error{color:#ffd1d1}
+@media(max-width:650px){.panel{padding:16px}.stats{grid-template-columns:repeat(2,1fr)}.feedback{padding:14px}}
+</style>
+</head>
+<body>
+<main class="shell">
+<section class="hero">
+<span class="badge">PRACTICE ONLY</span>
+<h1>Remote Viewing Practice</h1>
+<p>200 blind practice targets. No class. No worksheet. Just practice and feedback.</p>
+</section>
+
+<section class="panel practice">
+<div class="bank"><strong id="targetCount">0</strong><span>practice targets ready</span></div>
+<div id="loadState" class="loading">Loading target bank…</div>
+
+<div id="homeStage" class="hidden">
+<div class="big-status">Ready when you are.</div>
+<p id="todayLine" class="fine"></p>
+<button id="beginBtn" class="btn" type="button">Begin Practice</button>
+<div id="stats" class="stats"></div>
+</div>
+
+<div id="settleStage" class="hidden">
+<div class="big-status">Settle in</div>
+<div class="timer" id="timer">2:00</div>
+<div class="progress"><div id="progressBar"></div></div>
+<p class="fine">When the two minutes are complete, reveal your blind target ID.</p>
+<button id="showIdBtn" class="btn hidden" type="button">Reveal Target ID</button>
+</div>
+
+<div id="targetStage" class="hidden">
+<div class="fine">Your blind target ID</div>
+<div class="target-id" id="targetId">RV-0000-0000</div>
+<p>Do your viewing now. When you are finished, reveal the feedback.</p>
+<button id="revealBtn" class="btn" type="button">Reveal Feedback</button>
+</div>
+
+<div id="revealStage" class="hidden">
+<div class="big-status">Target Revealed</div>
+<div class="feedback">
+<h2 id="targetName"></h2>
+<div class="place" id="targetPlace"></div>
+<div class="feedback-image-wrap">
+<a id="imageLink" target="_blank" rel="noopener"><img id="feedbackImage" class="feedback-image" alt="Remote viewing feedback image"></a>
+<div class="photo-caption"><div id="feedbackNote"></div><div id="feedbackCredit"></div></div>
+</div>
+<div class="source"><div class="fine">Target source</div><strong id="targetSource"></strong><div class="fine" id="targetOriginal"></div></div>
+<div class="actions" style="justify-content:flex-start">
+<a id="photoSourceBtn" class="btn" target="_blank" rel="noopener">Photo Source</a>
+<a id="rvSourceBtn" class="btn secondary" target="_blank" rel="noopener">Original RV Source</a>
+</div>
+</div>
+<div class="actions" id="ratingButtons">
+<button class="btn good" type="button" data-rating="strong">Strong Correspondence</button>
+<button class="btn warn" type="button" data-rating="partial">Some Correspondence</button>
+<button class="btn bad" type="button" data-rating="miss">Little / No Correspondence</button>
+</div>
+</div>
+
+<div id="completeStage" class="hidden">
+<div class="big-status">Session saved.</div>
+<p class="fine" id="completeText"></p>
+<button id="againBtn" class="btn" type="button">Start Another</button>
+<div id="completeStats" class="stats"></div>
+</div>
+</section>
+</main>
+
+<script>
+(()=>{
+const TEST=new URLSearchParams(location.search).get('test')==='1';
+const SETTLE_MS=TEST?10000:120000;
+const STORE_KEY='rv-practice-only-v1';
+const stages=['homeStage','settleStage','targetStage','revealStage','completeStage'];
+let targets=[];
+let current=null;
+let timerHandle=null;
+
+const $=id=>document.getElementById(id);
+const show=id=>stages.forEach(s=>$(s).classList.toggle('hidden',s!==id));
+const today=()=>new Date().toISOString().slice(0,10);
+
+function loadStore(){
+  try{return JSON.parse(localStorage.getItem(STORE_KEY))||{used:[],sessions:[]};}
+  catch{return{used:[],sessions:[]};}
+}
+function saveStore(data){localStorage.setItem(STORE_KEY,JSON.stringify(data));}
+function counts(data){
+  const sessions=data.sessions||[];
+  return{
+    total:sessions.length,
+    strong:sessions.filter(x=>x.rating==='strong').length,
+    partial:sessions.filter(x=>x.rating==='partial').length,
+    miss:sessions.filter(x=>x.rating==='miss').length,
+    today:sessions.filter(x=>x.date===today()).length
+  };
+}
+function statsHtml(data){
+  const c=counts(data);
+  return `<div class="stat"><b>${c.total}</b><span>Sessions</span></div><div class="stat"><b>${c.strong}</b><span>Strong</span></div><div class="stat"><b>${c.partial}</b><span>Some</span></div><div class="stat"><b>${c.miss}</b><span>Miss</span></div>`;
+}
+function updateHome(){
+  const data=loadStore(),c=counts(data);
+  $('todayLine').textContent=c.today?`${c.today} session${c.today===1?'':'s'} completed today.`:'No sessions completed today yet.';
+  $('stats').innerHTML=statsHtml(data);
+}
+function pickTarget(){
+  const data=loadStore();
+  let used=new Set(data.used||[]);
+  let available=targets.filter(t=>!used.has(t.id));
+  if(!available.length){data.used=[];saveStore(data);available=[...targets];used=new Set();}
+  current=available[Math.floor(Math.random()*available.length)];
+  return current;
+}
+function startTimer(){
+  clearInterval(timerHandle);
+  const started=Date.now();
+  $('showIdBtn').classList.add('hidden');
+  $('progressBar').style.width='0%';
+  const tick=()=>{
+    const elapsed=Date.now()-started;
+    const remaining=Math.max(0,SETTLE_MS-elapsed);
+    const seconds=Math.ceil(remaining/1000);
+    const m=Math.floor(seconds/60),s=seconds%60;
+    $('timer').textContent=`${m}:${String(s).padStart(2,'0')}`;
+    $('progressBar').style.width=`${Math.min(100,(elapsed/SETTLE_MS)*100)}%`;
+    if(remaining<=0){
+      clearInterval(timerHandle);
+      $('timer').textContent='0:00';
+      $('progressBar').style.width='100%';
+      $('showIdBtn').classList.remove('hidden');
+    }
+  };
+  tick();timerHandle=setInterval(tick,250);
+}
+function revealTarget(){
+  const f=current.feedback||{};
+  $('targetName').textContent=current.name||'Target';
+  $('targetPlace').textContent=current.place||'';
+  $('feedbackImage').src=f.imageUrl||'';
+  $('feedbackImage').alt=`Feedback image for ${current.name||'target'}`;
+  $('imageLink').href=f.filePage||f.imageUrl||'#';
+  $('feedbackNote').textContent=f.note||'';
+  $('feedbackCredit').textContent=[f.credit,f.license].filter(Boolean).join(' · ');
+  $('targetSource').textContent=current.source||'';
+  $('targetOriginal').textContent=current.originalRef?`Reference: ${current.originalRef}`:'';
+  $('photoSourceBtn').href=f.filePage||f.imageUrl||'#';
+  $('rvSourceBtn').href=current.sourceUrl||'#';
+  show('revealStage');
+}
+function saveRating(rating){
+  const data=loadStore();
+  if(!data.used.includes(current.id))data.used.push(current.id);
+  data.sessions.push({id:current.id,rating,date:today(),ts:Date.now()});
+  saveStore(data);
+  const c=counts(data);
+  $('completeText').textContent=c.today>=3?`You have completed ${c.today} sessions today. You can take a break or keep practicing.`:'Ready for another whenever you are.';
+  $('completeStats').innerHTML=statsHtml(data);
+  show('completeStage');
+}
+
+$('beginBtn').addEventListener('click',()=>{pickTarget();show('settleStage');startTimer();});
+$('showIdBtn').addEventListener('click',()=>{$('targetId').textContent=current.id;show('targetStage');});
+$('revealBtn').addEventListener('click',revealTarget);
+$('ratingButtons').addEventListener('click',e=>{const b=e.target.closest('[data-rating]');if(b)saveRating(b.dataset.rating);});
+$('againBtn').addEventListener('click',()=>{updateHome();show('homeStage');});
+
+fetch('../remote-viewing-v2/targets-curated.json',{cache:'no-store'})
+  .then(r=>{if(!r.ok)throw new Error(`HTTP ${r.status}`);return r.json();})
+  .then(data=>{
+    targets=Array.isArray(data)?data.filter(t=>t&&t.id&&t.feedback&&t.feedback.imageUrl):[];
+    if(!targets.length)throw new Error('No practice targets found.');
+    $('targetCount').textContent=targets.length;
+    $('loadState').classList.add('hidden');
+    updateHome();show('homeStage');
+  })
+  .catch(err=>{
+    $('loadState').className='loading error';
+    $('loadState').textContent=`Could not load the practice targets: ${err.message}`;
+  });
+})();
+</script>
+</body>
+</html>
