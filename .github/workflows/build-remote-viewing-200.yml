@@ -7,6 +7,7 @@ on:
       - work/remote-viewing-200-2026-09-22
     paths:
       - 'remote-viewing-v2/build_target_bank.py'
+      - 'remote-viewing-v2/polish_remote_viewing_v2.py'
       - 'remote-viewing-v2/targets-new-curated*.json'
       - '.github/workflows/build-remote-viewing-200.yml'
 
@@ -26,14 +27,17 @@ jobs:
       - name: Build and audit canonical target bank
         run: python3 remote-viewing-v2/build_target_bank.py
 
-      - name: Commit generated canonical bank and audit
+      - name: Polish V2 page for 200-target test bank
+        run: python3 remote-viewing-v2/polish_remote_viewing_v2.py
+
+      - name: Commit generated canonical bank audit and page
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add remote-viewing-v2/targets-original-32.json remote-viewing-v2/targets-curated.json remote-viewing-v2/targets-audit.json
+          git add remote-viewing-v2/targets-original-32.json remote-viewing-v2/targets-curated.json remote-viewing-v2/targets-audit.json remote-viewing-v2/index.html
           if git diff --cached --quiet; then
             echo "Generated files already current."
           else
-            git commit -m "Build audited 200-target remote viewing bank"
+            git commit -m "Finalize audited 200-target remote viewing test bank"
             git push origin HEAD:work/remote-viewing-200-2026-09-22
           fi
